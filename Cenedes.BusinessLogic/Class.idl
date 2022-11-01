@@ -1,0 +1,9 @@
+namespace Cenedes_BusinessLogic
+{
+    [default_interface]
+    runtimeclass Class
+    {
+        Class();
+        Int32 MyProperty;
+    }
+}

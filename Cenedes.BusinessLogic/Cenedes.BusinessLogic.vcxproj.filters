@@ -21,7 +21,7 @@
     <Midl Include="Class.idl" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cenedes_Models.def" />
+    <None Include="Cenedes_BusinessLogic.def" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

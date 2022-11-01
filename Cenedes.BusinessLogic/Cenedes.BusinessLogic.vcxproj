@@ -7,9 +7,9 @@
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
     <MinimalCoreWin>true</MinimalCoreWin>
-    <ProjectGuid>{8f48460b-abc1-47a8-9678-d03a377f968f}</ProjectGuid>
-    <ProjectName>Cenedes.ViewModels</ProjectName>
-    <RootNamespace>Cenedes_ViewModels</RootNamespace>
+    <ProjectGuid>{28c68436-c6e5-4ea7-baea-95e1c758ac39}</ProjectGuid>
+    <ProjectName>Cenedes.BusinessLogic</ProjectName>
+    <RootNamespace>Cenedes_BusinessLogic</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
@@ -19,7 +19,6 @@
     <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <DesktopCompatible>true</DesktopCompatible>
     <UseWinUI>true</UseWinUI>
-    <CppWinRTVerbosity>high</CppWinRTVerbosity>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ItemGroup Label="ProjectConfigurations">
@@ -108,7 +107,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>Cenedes_ViewModels.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>Cenedes_BusinessLogic.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -169,7 +168,7 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cenedes_ViewModels.def" />
+    <None Include="Cenedes_BusinessLogic.def" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -177,6 +176,14 @@
     <Text Include="readme.txt">
       <DeploymentContent>false</DeploymentContent>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cenedes.Models\Cenedes.Models.vcxproj">
+      <Project>{1a7d5aa1-e62c-4f61-a249-60d3bb3ba071}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Cenedes.Repository\Cenedes.Repository.vcxproj">
+      <Project>{af5f37d2-75fb-4a14-b1b6-86aca6bac427}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
