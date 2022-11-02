@@ -1,21 +1,30 @@
 #pragma once
 
-#include <winrt/Windows.Foundation.h>
-
+#include "Cenedes.Models.Entity.h"
 #include "Cenedes.Models.Sex.h"
 
 namespace Cenedes::Models
 {
-  struct Person
+  struct Person abstract : Entity
   {
-    uint64_t                      PersonId;
-    winrt::hstring                Carnet;
-    winrt::hstring                Name;
-    winrt::hstring                LastName;
-    uint16_t                      Age;
-    std::tm                       Birthday;
-    Cenedes::Models::Sex          Sex;
-    winrt::hstring                Address;
-    std::optional<winrt::hstring> Phone;
+    UInt64   PersonId;
+    String   Carnet;
+    String   Name;
+    String   LastName;
+    UInt16   Age;
+    DateTime Birthday;
+    Sex      Sex;
+    String   Address;
+    Nullable<String> Phone;
+
+    UInt64 GetId() const noexcept override
+    {
+      return PersonId;
+    }
+
+    void SetId(const UInt64 Id) noexcept override
+    {
+      PersonId = Id;
+    }
   };
 }

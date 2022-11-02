@@ -17,7 +17,6 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Class.idl" />
     <Midl Include="Cenedes.ViewModels.Prescription.idl" />
     <Midl Include="Cenedes.ViewModels.Patient.idl" />
     <Midl Include="Cenedes.ViewModels.Types.idl" />

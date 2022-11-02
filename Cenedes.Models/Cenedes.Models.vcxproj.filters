@@ -17,6 +17,27 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Cenedes.Models.Person.h" />
     <ClInclude Include="Cenedes.Models.Sex.h" />
+    <ClInclude Include="Cenedes.Models.Nurse.h" />
+    <ClInclude Include="Cenedes.Models.Patient.h" />
+    <ClInclude Include="Cenedes.Models.Medic.h" />
+    <ClInclude Include="Cenedes.Models.ClinicalReport.h" />
+    <ClInclude Include="Cenedes.Models.PatientClinic.h" />
+    <ClInclude Include="Cenedes.Models.PatientClinicDetails.h" />
+    <ClInclude Include="Cenedes.Models.PatientExam.h" />
+    <ClInclude Include="Cenedes.Models.Epicrisis.h" />
+    <ClInclude Include="Cenedes.Models.Exam.h" />
+    <ClInclude Include="Cenedes.Models.MedicalAppointment.h" />
+    <ClInclude Include="Cenedes.Models.MedicalSpeciality.h" />
+    <ClInclude Include="Cenedes.Models.MedicalSchedule.h" />
+    <ClInclude Include="Cenedes.Models.MedicMedicialSpeciality.h" />
+    <ClInclude Include="Cenedes.Models.Consult.h" />
+    <ClInclude Include="Cenedes.Models.Prescription.h" />
+    <ClInclude Include="Cenedes.Models.PrescriptionDetails.h" />
+    <ClInclude Include="Cenedes.Models.ConsultExam.h" />
+    <ClInclude Include="Cenedes.Models.Clinic.h" />
+    <ClInclude Include="Cenedes.Models.Types.h" />
+    <ClInclude Include="Cenedes.Models.EntityBase.h" />
+    <ClInclude Include="Cenedes.Models.Entity.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Cenedes.Models.def" />
