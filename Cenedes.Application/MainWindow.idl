@@ -4,5 +4,7 @@ namespace Cenedes.Application
     runtimeclass MainWindow : Microsoft.UI.Xaml.Window
     {
         MainWindow();
+        Microsoft.UI.Xaml.Controls.Frame ContentFrame { get; };
+        Microsoft.UI.Windowing.AppWindow MainAppWindow { get; };
     }
 }
