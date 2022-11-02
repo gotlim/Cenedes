@@ -15,17 +15,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Cenedes.Models.Person.h" />
-    <ClInclude Include="Cenedes.Models.Sex.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cenedes.Models.def" />
+    <Midl Include="Class.idl" />
+    <Midl Include="Cenedes.Helpers.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cenedes.Helpers.def" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PropertySheet.props" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Cenedes.Models.idl" />
+    <Text Include="Readme.txt" />
   </ItemGroup>
 </Project>

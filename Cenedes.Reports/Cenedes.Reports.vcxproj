@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.props" Condition="Exists('..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.props')" />
-  <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.props')" />
   <Import Project="..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.props" Condition="Exists('..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.props')" />
+  <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.props')" />
   <PropertyGroup Label="Globals">
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
     <MinimalCoreWin>true</MinimalCoreWin>
-    <ProjectGuid>{28c68436-c6e5-4ea7-baea-95e1c758ac39}</ProjectGuid>
-    <ProjectName>Cenedes.BusinessLogic</ProjectName>
-    <RootNamespace>Cenedes.BusinessLogic</RootNamespace>
+    <ProjectGuid>{d9f30bef-5153-42cc-8779-e1bb83e531fd}</ProjectGuid>
+    <ProjectName>Cenedes.Reports</ProjectName>
+    <RootNamespace>Cenedes.Reports</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
@@ -19,6 +19,7 @@
     <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <DesktopCompatible>true</DesktopCompatible>
     <UseWinUI>true</UseWinUI>
+    <CppWinRTVerbosity>high</CppWinRTVerbosity>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ItemGroup Label="ProjectConfigurations">
@@ -107,7 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>Cenedes.BusinessLogic.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>Cenedes.Reports.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -149,15 +150,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Cenedes.BusinessLogic.h">
-      <DependentUpon>Cenedes.BusinessLogic.idl</DependentUpon>
+    <ClInclude Include="Cenedes.Reports.h">
+      <DependentUpon>Cenedes.Reports.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cenedes.BusinessLogic.cpp">
-      <DependentUpon>Cenedes.BusinessLogic.idl</DependentUpon>
+    <ClCompile Include="Cenedes.Reports.cpp">
+      <DependentUpon>Cenedes.Reports.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -166,11 +167,16 @@
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cenedes.BusinessLogic.def" />
+    <None Include="Cenedes.Reports.def" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Cenedes.Reports.idl">
+      <SubType>Designer</SubType>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cenedes.Helpers\Cenedes.Helpers.vcxproj">
@@ -182,26 +188,24 @@
     <ProjectReference Include="..\Cenedes.Repository\Cenedes.Repository.vcxproj">
       <Project>{af5f37d2-75fb-4a14-b1b6-86aca6bac427}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Midl Include="Cenedes.BusinessLogic.idl">
-      <SubType>Designer</SubType>
-    </Midl>
+    <ProjectReference Include="..\Cenedes.ViewModels\Cenedes.ViewModels.vcxproj">
+      <Project>{8f48460b-abc1-47a8-9678-d03a377f968f}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets" Condition="Exists('..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets')" />
     <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.targets')" />
+    <Import Project="..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets" Condition="Exists('..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets')" />
     <Import Project="..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.221101.3\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.WindowsAppSDK.1.1.5\build\native\Microsoft.WindowsAppSDK.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.SDK.BuildTools.10.0.22621.755\build\Microsoft.Windows.SDK.BuildTools.targets'))" />
   </Target>

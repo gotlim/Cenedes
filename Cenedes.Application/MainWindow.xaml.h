@@ -7,20 +7,16 @@
 
 #pragma pop_macro("GetCurrentTime")
 
-namespace winrt::Cenedes_Application::implementation
+namespace winrt::Cenedes::Application::implementation
 {
     struct MainWindow : MainWindowT<MainWindow>
     {
         MainWindow();
-
-        int32_t MyProperty();
-        void MyProperty(int32_t value);
-
         void myButton_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
     };
 }
 
-namespace winrt::Cenedes_Application::factory_implementation
+namespace winrt::Cenedes::Application::factory_implementation
 {
     struct MainWindow : MainWindowT<MainWindow, implementation::MainWindow>
     {

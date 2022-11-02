@@ -7,7 +7,7 @@
 
 #pragma pop_macro("GetCurrentTime")
 
-namespace winrt::Cenedes_Application::implementation
+namespace winrt::Cenedes::Application::implementation
 {
     struct App : AppT<App>
     {

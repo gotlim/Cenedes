@@ -1,0 +1,9 @@
+namespace Cenedes.ViewModels
+{
+    [bindable]
+    [default_interface]
+    runtimeclass Patient 
+    {
+        Patient();
+    }
+}

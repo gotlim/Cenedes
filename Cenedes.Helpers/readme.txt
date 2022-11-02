@@ -1,5 +1,5 @@
 ========================================================================
-    Cenedes.BusinessLogic Project Overview
+    Cenedes.Helpers Project Overview
 ========================================================================
 
 This project demonstrates how to get started authoring Windows Runtime 

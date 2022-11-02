@@ -1,0 +1,9 @@
+namespace Cenedes.BusinessLogic
+{
+    [bindable]
+    [default_interface]
+    runtimeclass BusinessLogic 
+    {
+        BusinessLogic();
+    }
+}

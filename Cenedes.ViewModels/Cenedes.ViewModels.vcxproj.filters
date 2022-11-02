@@ -11,7 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Class.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -19,15 +18,15 @@
   </ItemGroup>
   <ItemGroup>
     <Midl Include="Class.idl" />
+    <Midl Include="Cenedes.ViewModels.Prescription.idl" />
+    <Midl Include="Cenedes.ViewModels.Patient.idl" />
+    <Midl Include="Cenedes.ViewModels.Types.idl" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cenedes_ViewModels.def" />
+    <None Include="Cenedes.ViewModels.def" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PropertySheet.props" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="readme.txt" />
   </ItemGroup>
 </Project>
