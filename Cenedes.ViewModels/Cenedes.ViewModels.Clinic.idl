@@ -1,0 +1,13 @@
+namespace Cenedes.ViewModels
+{
+    [bindable]
+    [default_interface]
+    runtimeclass Clinic 
+    {
+        Clinic();
+        UInt64 ClinicId;
+        String Name;
+        String Phone;
+        String Address;
+    }
+}

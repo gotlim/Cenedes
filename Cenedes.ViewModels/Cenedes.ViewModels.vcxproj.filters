@@ -20,6 +20,9 @@
     <Midl Include="Cenedes.ViewModels.Prescription.idl" />
     <Midl Include="Cenedes.ViewModels.Patient.idl" />
     <Midl Include="Cenedes.ViewModels.Types.idl" />
+    <Midl Include="Cenedes.ViewModels.PrescriptionDetails.idl" />
+    <Midl Include="Cenedes.ViewModels.PatientClinic.idl" />
+    <Midl Include="Cenedes.ViewModels.Clinic.idl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Cenedes.ViewModels.def" />

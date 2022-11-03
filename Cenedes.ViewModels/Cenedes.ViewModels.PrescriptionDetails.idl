@@ -1,0 +1,19 @@
+import "Cenedes.ViewModels.Types.idl";
+
+namespace Cenedes.ViewModels
+{
+    [bindable]
+    [default_interface]
+    runtimeclass PrescriptionDetails : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        PrescriptionDetails();
+
+        UInt64   PrescriptionId;
+        String   Medicine;
+        String   MedicineAmountPerDay;
+        DateTime TimeTakeMedicine;
+        String   MedicineDetails;
+        DateTime BeginDate;
+        DateTime EndDate;
+    }
+}

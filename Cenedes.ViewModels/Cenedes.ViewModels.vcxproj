@@ -174,23 +174,47 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Cenedes.ViewModels.Clinic.h">
+      <DependentUpon>Cenedes.ViewModels.Clinic.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="Cenedes.ViewModels.Patient.h">
       <DependentUpon>Cenedes.ViewModels.Patient.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.PatientClinic.h">
+      <DependentUpon>Cenedes.ViewModels.PatientClinic.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="Cenedes.ViewModels.Prescription.h">
       <DependentUpon>Cenedes.ViewModels.Prescription.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.PrescriptionDetails.h">
+      <DependentUpon>Cenedes.ViewModels.PrescriptionDetails.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cenedes.ViewModels.Clinic.cpp">
+      <DependentUpon>Cenedes.ViewModels.Clinic.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="Cenedes.ViewModels.Patient.cpp">
       <DependentUpon>Cenedes.ViewModels.Patient.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.PatientClinic.cpp">
+      <DependentUpon>Cenedes.ViewModels.PatientClinic.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="Cenedes.ViewModels.Prescription.cpp">
       <DependentUpon>Cenedes.ViewModels.Prescription.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.PrescriptionDetails.cpp">
+      <DependentUpon>Cenedes.ViewModels.PrescriptionDetails.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -220,10 +244,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Midl Include="Cenedes.ViewModels.Clinic.idl">
+      <SubType>Designer</SubType>
+    </Midl>
     <Midl Include="Cenedes.ViewModels.Patient.idl">
       <SubType>Designer</SubType>
     </Midl>
+    <Midl Include="Cenedes.ViewModels.PatientClinic.idl">
+      <SubType>Designer</SubType>
+    </Midl>
     <Midl Include="Cenedes.ViewModels.Prescription.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.PrescriptionDetails.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="Cenedes.ViewModels.Types.idl" />
