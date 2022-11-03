@@ -20,16 +20,16 @@ using namespace Cenedes::Application::implementation;
 /// </summary>
 App::App()
 {
-    InitializeComponent();
+  InitializeComponent();
 
 #if defined _DEBUG && !defined DISABLE_XAML_GENERATED_BREAK_ON_UNHANDLED_EXCEPTION
-    UnhandledException([this](IInspectable const&, UnhandledExceptionEventArgs const& e)
+  UnhandledException([this](IInspectable const&, UnhandledExceptionEventArgs const& e)
     {
-        if (IsDebuggerPresent())
-        {
-            auto errorMessage = e.Message();
-            __debugbreak();
-        }
+      if (IsDebuggerPresent())
+      {
+        auto errorMessage = e.Message();
+        __debugbreak();
+      }
     });
 #endif
 }
@@ -41,6 +41,6 @@ App::App()
 /// <param name="e">Details about the launch request and process.</param>
 void App::OnLaunched(LaunchActivatedEventArgs const&)
 {
-    window = make<MainWindow>();
-    window.Activate();
+  window = make<MainWindow>();
+  window.Activate();
 }

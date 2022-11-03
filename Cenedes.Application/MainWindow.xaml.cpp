@@ -5,6 +5,7 @@
 #endif
 
 #include "HomePage.xaml.h"
+#include "ExamPage.xaml.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -60,6 +61,14 @@ namespace winrt::Cenedes::Application::implementation
       hstring tag_value = unbox_value<hstring>(tag);
 
       if (tag_value == L"Home")
+      {
+        ContentFrame().Navigate(xaml_typename<Cenedes::Application::HomePage>(), *this);
+      }
+      else if (tag_value == L"Exam")
+      {
+        ContentFrame().Navigate(xaml_typename<Cenedes::Application::ExamPage>(), *this);
+      }
+      else
       {
         ContentFrame().Navigate(xaml_typename<Cenedes::Application::HomePage>(), *this);
       }
