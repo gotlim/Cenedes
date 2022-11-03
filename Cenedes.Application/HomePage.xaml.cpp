@@ -24,7 +24,28 @@ namespace winrt::Cenedes::Application::implementation
     m_MainAppWindow = main_window.MainAppWindow();
   }
 
-  void HomePage::ButtonClick(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+  fire_and_forget HomePage::ButtonClick(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
   {
+    Microsoft::UI::Xaml::Controls::ContentDialog content_dialog;
+    content_dialog.XamlRoot(this->XamlRoot());
+    content_dialog.Title(box_value(L"Título del Diálogo"));
+    content_dialog.Content(box_value(L"Contenido del Diálogo"));
+    content_dialog.PrimaryButtonText(L"Centrar La Ventana");
+    content_dialog.SecondaryButtonText(L"Boton Secundario");
+    content_dialog.CloseButtonText(L"Boton de Cierre");
+
+    content_dialog.PrimaryButtonClick([&](const auto&, const auto&)
+      {
+        // Center MainWindow
+
+        int32_t screen_x = ::GetSystemMetrics(SM_CXSCREEN);
+        int32_t screen_y = ::GetSystemMetrics(SM_CYSCREEN);
+        m_MainAppWindow.Move({
+          .X = screen_x / 2 - m_MainAppWindow.Size().Width / 2,
+          .Y = screen_y / 2 - m_MainAppWindow.Size().Height / 2
+          });
+      });
+
+    auto dialog_result = co_await content_dialog.ShowAsync();
   }
 }

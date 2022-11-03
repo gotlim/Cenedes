@@ -17,8 +17,31 @@ namespace winrt::Cenedes::Application::implementation
     InitializeComponent();
   }
 
-  void ExamPage::ButtonSave_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+  void ExamPage::OnNavigatedTo(NavigationEventArgs const& args)
   {
+    Window window = args.Parameter().as<Window>();
+    MainWindow main_window = window.as<MainWindow>();
+    m_MainAppWindow = main_window.MainAppWindow();
+  }
+
+  IAsyncAction ExamPage::ButtonSave_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+  {
+    try
+    {
+      Microsoft::UI::Xaml::Controls::ContentDialog content_dialog;
+      content_dialog.XamlRoot(this->XamlRoot());
+      content_dialog.Title(box_value(L"Título del Diálogo"));
+      content_dialog.Content(box_value(L"Contenido del Diálogo"));
+      content_dialog.PrimaryButtonText(L"Boton Principal");
+      content_dialog.SecondaryButtonText(L"Boton Secundario");
+      content_dialog.CloseButtonText(L"Boton de Cierre");
+      auto dialog_result = co_await content_dialog.ShowAsync();
+    }
+    catch (winrt::hresult_error const& ex)
+    {
+      winrt::hresult hr = ex.code();
+      winrt::hstring message = ex.message();
+    }
   }
 
   void ExamPage::ButtonCancel_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)

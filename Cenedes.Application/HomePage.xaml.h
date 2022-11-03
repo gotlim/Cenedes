@@ -9,7 +9,7 @@ namespace winrt::Cenedes::Application::implementation
   public:
     HomePage();
     void OnNavigatedTo(NavigationEventArgs const& args);
-    void ButtonClick(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+    fire_and_forget ButtonClick(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
 
   private:
     AppWindow m_MainAppWindow{ nullptr };
