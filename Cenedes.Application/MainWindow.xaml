@@ -49,7 +49,7 @@
                 <NavigationViewItem Tag="Presenters" Icon="Print" Content="Presenters"></NavigationViewItem>
                 <NavigationViewItem Tag="Configs" Icon="Setting" Content="Window Configurations"></NavigationViewItem>
                 <NavigationViewItem Tag="Titlebar" Icon="Caption" Content="TitleBar"></NavigationViewItem>
-                <NavigationViewItem Tag="Exam" Icon="Document" Content="Exam"></NavigationViewItem>
+                <NavigationViewItem Tag="Exam" Icon="Edit" Content="Exam"></NavigationViewItem>
             
             </NavigationView.MenuItems>
             <ScrollViewer>
