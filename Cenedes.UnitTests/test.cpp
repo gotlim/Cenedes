@@ -1,22 +1,28 @@
 #include "pch.h"
 
+#include <Cenedes.Helpers.h>
 #include <Cenedes.ViewModels.Clinic.h> // Implementation
 
-namespace Cenedes
-{
-  using namespace ::winrt::Cenedes;
-}
+
+using namespace Cenedes;
+using namespace Helpers::Extensions;
+
+using namespace winrt::Cenedes;
 
 TEST(TestCaseName, TestName)
 {
-  Cenedes::ViewModels::Clinic clinic;
+  ViewModels::Clinic clinic;
   clinic.Name(L"Denis West");
   EXPECT_EQ(clinic.Name(), winrt::to_hstring(L"Denis West"));
 
   try
   {
-    // auto clinic_impl = clinic.as<Cenedes::ViewModels::implementation::Clinic>();
-    // EXPECT_EQ(clinic_impl->Model().Name, winrt::to_hstring(L"Denis West"));
+    auto native_model = clinic->*Model<Models::Clinic>();
+    EXPECT_EQ(native_model->Name, winrt::to_hstring(L"Denis West"));
+    EXPECT_EQ(clinic->*Model<Models::Clinic>()->*&Models::Clinic::Name, winrt::to_hstring(L"Denis West"));
+
+    (clinic->*Model<Models::Clinic>()->*&Models::Clinic::Name) = L"Javier";
+    EXPECT_EQ(native_model->Name, winrt::to_hstring(L"Javier"));
   }
   catch (const winrt::hresult_error& ex)
   {

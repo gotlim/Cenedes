@@ -21,7 +21,7 @@
     <AppxPackage>false</AppxPackage>
     <ApplicationType>Windows Store</ApplicationType>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <WindowsPackageType>None</WindowsPackageType>
     <UseWinUI>true</UseWinUI>
@@ -121,6 +121,9 @@
       <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdc17</LanguageStandard_C>
       <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ConformanceMode>
       <EnableModules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableModules>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|arm64'">$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
@@ -138,6 +141,9 @@
       <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdc17</LanguageStandard_C>
       <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ConformanceMode>
       <EnableModules Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableModules>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|arm64'">$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -218,19 +224,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cenedes.BusinessLogic\Cenedes.BusinessLogic.vcxproj">
-      <Project>{28c68436-c6e5-4ea7-baea-95e1c758ac39}</Project>
+      <Project>{816d7c86-c053-42c0-84c3-fc6d3c23033f}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Cenedes.Helpers\Cenedes.Helpers.vcxproj">
-      <Project>{da4b59e5-3e0a-4f6b-83c0-f28d1cb260aa}</Project>
+      <Project>{8579e792-1f9a-4a39-9a5a-2f380e370d14}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Cenedes.Models\Cenedes.Models.vcxproj">
-      <Project>{1a7d5aa1-e62c-4f61-a249-60d3bb3ba071}</Project>
+      <Project>{e3cdd9f5-7847-4012-ab12-ec0e69ff9357}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Cenedes.Reports\Cenedes.Reports.vcxproj">
-      <Project>{d9f30bef-5153-42cc-8779-e1bb83e531fd}</Project>
+      <Project>{e07a962b-01f1-4023-b1b3-20495af93104}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Cenedes.Repository\Cenedes.Repository.vcxproj">
-      <Project>{af5f37d2-75fb-4a14-b1b6-86aca6bac427}</Project>
+      <Project>{f9076fcd-b749-4710-8fcc-5be488db17b2}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Cenedes.ViewModels\Cenedes.ViewModels.vcxproj">
       <Project>{8f48460b-abc1-47a8-9678-d03a377f968f}</Project>

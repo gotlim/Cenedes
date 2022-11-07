@@ -230,20 +230,6 @@
     <None Include="PropertySheet.props" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cenedes.BusinessLogic\Cenedes.BusinessLogic.vcxproj">
-      <Project>{28c68436-c6e5-4ea7-baea-95e1c758ac39}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Cenedes.Helpers\Cenedes.Helpers.vcxproj">
-      <Project>{da4b59e5-3e0a-4f6b-83c0-f28d1cb260aa}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Cenedes.Models\Cenedes.Models.vcxproj">
-      <Project>{1a7d5aa1-e62c-4f61-a249-60d3bb3ba071}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Cenedes.Repository\Cenedes.Repository.vcxproj">
-      <Project>{af5f37d2-75fb-4a14-b1b6-86aca6bac427}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Midl Include="Cenedes.ViewModels.Clinic.idl">
       <SubType>Designer</SubType>
     </Midl>
@@ -261,6 +247,23 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="Cenedes.ViewModels.Types.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cenedes.BusinessLogic\Cenedes.BusinessLogic.vcxproj">
+      <Project>{816d7c86-c053-42c0-84c3-fc6d3c23033f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Cenedes.Helpers\Cenedes.Helpers.vcxproj">
+      <Project>{8579e792-1f9a-4a39-9a5a-2f380e370d14}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Cenedes.Models\Cenedes.Models.vcxproj">
+      <Project>{e3cdd9f5-7847-4012-ab12-ec0e69ff9357}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Cenedes.Reports\Cenedes.Reports.vcxproj">
+      <Project>{e07a962b-01f1-4023-b1b3-20495af93104}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Cenedes.Repository\Cenedes.Repository.vcxproj">
+      <Project>{f9076fcd-b749-4710-8fcc-5be488db17b2}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

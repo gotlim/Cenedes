@@ -13,37 +13,37 @@
             <IsWinMDFile>false</IsWinMDFile>
         </ReferenceCopyLocalPaths>
 
-        <Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).BusinessLogic\$(SolutionName).BusinessLogic.winmd">
+        <!--<Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).BusinessLogic\$(SolutionName).BusinessLogic.winmd">
             <IsWinMDFile>true</IsWinMDFile>
-        </Reference>
+        </Reference>-->
         <ReferenceCopyLocalPaths Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).BusinessLogic\$(SolutionName).BusinessLogic.dll">
             <IsWinMDFile>false</IsWinMDFile>
         </ReferenceCopyLocalPaths>
 
-        <Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Helpers\$(SolutionName).Helpers.winmd">
+        <!--<Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Helpers\$(SolutionName).Helpers.winmd">
             <IsWinMDFile>true</IsWinMDFile>
-        </Reference>
+        </Reference>-->
         <ReferenceCopyLocalPaths Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Helpers\$(SolutionName).Helpers.dll">
             <IsWinMDFile>false</IsWinMDFile>
         </ReferenceCopyLocalPaths>
 
-        <Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Models\$(SolutionName).Models.winmd">
+        <!--<Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Models\$(SolutionName).Models.winmd">
             <IsWinMDFile>true</IsWinMDFile>
-        </Reference>
+        </Reference>-->
         <ReferenceCopyLocalPaths Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Models\$(SolutionName).Models.dll">
             <IsWinMDFile>false</IsWinMDFile>
         </ReferenceCopyLocalPaths>
 
-        <Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Reports\$(SolutionName).Reports.winmd">
+        <!--<Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Reports\$(SolutionName).Reports.winmd">
             <IsWinMDFile>true</IsWinMDFile>
-        </Reference>
+        </Reference>-->
         <ReferenceCopyLocalPaths Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Reports\$(SolutionName).Reports.dll">
             <IsWinMDFile>false</IsWinMDFile>
         </ReferenceCopyLocalPaths>
 
-        <Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Repository\$(SolutionName).Repository.winmd">
+        <!--<Reference Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Repository\$(SolutionName).Repository.winmd">
             <IsWinMDFile>true</IsWinMDFile>
-        </Reference>
+        </Reference>-->
         <ReferenceCopyLocalPaths Include="$(SolutionDir)\Build\Bin\$(Platform)\$(Configuration)\$(SolutionName).Repository\$(SolutionName).Repository.dll">
             <IsWinMDFile>false</IsWinMDFile>
         </ReferenceCopyLocalPaths>

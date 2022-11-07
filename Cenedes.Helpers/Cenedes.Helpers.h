@@ -1,18 +1,11 @@
 ﻿#pragma once
 
-#include "Helper.g.h"
-
-namespace winrt::Cenedes::Helpers::implementation
+namespace Cenedes::Helpers
 {
-  struct Helper : HelperT<Helper>
-  {
-    Helper() = default;
-  };
+  template <class... T>
+  constexpr bool AlwaysFalse = false;
 }
 
-namespace winrt::Cenedes::Helpers::factory_implementation
-{
-  struct Helper : HelperT<Helper, implementation::Helper>
-  {
-  };
-}
+#include "Cenedes.Helpers.Extensions.h"
+#include "Cenedes.Helpers.String.h"
+#include "Cenedes.Helpers.Entity.h"

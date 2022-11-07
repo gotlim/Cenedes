@@ -23,12 +23,13 @@
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Cenedes.Application.h>
-#include <winrt/Cenedes.BusinessLogic.h>
-#include <winrt/Cenedes.Helpers.h>
-#include <winrt/Cenedes.Models.h>
-#include <winrt/Cenedes.Reports.h>
-#include <winrt/Cenedes.Repository.h>
 #include <winrt/Cenedes.ViewModels.h>
+
+#include <Cenedes.BusinessLogic.h>
+#include <Cenedes.Helpers.h>
+#include <Cenedes.Models.h>
+#include <Cenedes.Reports.h>
+#include <Cenedes.Repository.h>
 
 #pragma pop_macro("GetCurrentTime")
 #pragma pop_macro("X64")

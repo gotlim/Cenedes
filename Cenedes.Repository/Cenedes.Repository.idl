@@ -1,9 +1,0 @@
-namespace Cenedes.Repository
-{
-    [bindable]
-    [default_interface]
-    runtimeclass Repository 
-    {
-        Repository();
-    }
-}

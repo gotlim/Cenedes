@@ -1,9 +1,0 @@
-namespace Cenedes.Models
-{
-    [bindable]
-    [default_interface]
-    runtimeclass Model
-    {
-        Model();
-    }
-}

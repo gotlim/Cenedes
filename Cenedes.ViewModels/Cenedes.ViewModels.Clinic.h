@@ -23,7 +23,7 @@ namespace winrt::Cenedes::ViewModels::implementation
     hstring Address() const noexcept;
     void Address(const hstring& address) noexcept;
 
-    ::Cenedes::Models::Clinic& Model() const noexcept;
+    uint64_t Model() const noexcept;
 
   private:
     ::Cenedes::Models::Clinic m_Clinic;

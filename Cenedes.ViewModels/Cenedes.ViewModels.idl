@@ -2,6 +2,6 @@ namespace Cenedes.ViewModels
 {
     interface IModel
     {
-        Object Model { get; };
+        UInt64 Model { get; };
     }
 }

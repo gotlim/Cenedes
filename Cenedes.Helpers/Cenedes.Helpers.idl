@@ -1,9 +1,0 @@
-namespace Cenedes.Helpers
-{
-    [bindable]
-    [default_interface]
-    runtimeclass Helper
-    {
-        Helper();
-    }
-}

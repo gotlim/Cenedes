@@ -48,8 +48,8 @@ namespace winrt::Cenedes::ViewModels::implementation
     m_Clinic.Address = address;
   }
 
-  ::Cenedes::Models::Clinic& Clinic::Model() const noexcept
+  uint64_t Clinic::Model() const noexcept
   {
-    return const_cast<::Cenedes::Models::Clinic&>(m_Clinic);
+    return reinterpret_cast<uint64_t>(std::addressof(m_Clinic));
   }
 }

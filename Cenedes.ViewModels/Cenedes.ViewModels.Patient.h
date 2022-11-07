@@ -12,7 +12,7 @@ namespace winrt::Cenedes::ViewModels::implementation
   {
   public:
     Patient() = default;
-    IInspectable Model() const noexcept;
+    uint64_t Model() const noexcept;
 
   private:
     Models::Patient m_Patient;

@@ -1,9 +1,0 @@
-namespace Cenedes.Reports
-{
-    [bindable]
-    [default_interface]
-    runtimeclass Report
-    {
-        Report();
-    }
-}

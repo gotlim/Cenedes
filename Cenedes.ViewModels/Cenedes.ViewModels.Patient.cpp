@@ -11,8 +11,8 @@ using namespace Cenedes::Helpers;
 
 namespace winrt::Cenedes::ViewModels::implementation
 {
-  Windows::Foundation::IInspectable Patient::Model() const noexcept
+  uint64_t Patient::Model() const noexcept
   {
-    return {};
+    return reinterpret_cast<uint64_t>(std::addressof(m_Patient));
   }
 }
