@@ -4,45 +4,52 @@
 #include "Clinic.g.cpp"
 #endif
 
+#include "Cenedes.Helpers.String.h"
+
 namespace winrt::Cenedes::ViewModels::implementation
 {
-  uint64_t Clinic::ClinicId() const
+  uint64_t Clinic::ClinicId() const noexcept
   {
-    return m_ClinicId;
+    return m_Clinic.ClinicId;
   }
 
-  void Clinic::ClinicId(const uint64_t clinic_id)
+  void Clinic::ClinicId(const uint64_t clinic_id) noexcept
   {
-    m_ClinicId = clinic_id;
+    m_Clinic.ClinicId = clinic_id;
   }
 
-  hstring Clinic::Name() const
+  hstring Clinic::Name() const noexcept
   {
-    return m_Name;
+    return m_Clinic.Name;
   }
 
-  void Clinic::Name(const hstring& name)
+  void Clinic::Name(const hstring& name) noexcept
   {
-    m_Name = name;
+    m_Clinic.Name = name;
   }
 
-  hstring Clinic::Phone() const
+  hstring Clinic::Phone() const noexcept
   {
-    return m_Phone;
+    return m_Clinic.Phone.value_or(::Cenedes::Helpers::String::Empty);
   }
 
-  void Clinic::Phone(const hstring& phone)
+  void Clinic::Phone(const hstring& phone) noexcept
   {
-    m_Phone = phone;
+    m_Clinic.Phone = phone;
   }
 
-  hstring Clinic::Address() const
+  hstring Clinic::Address() const noexcept
   {
-    return m_Address;
+    return m_Clinic.Address.value_or(::Cenedes::Helpers::String::Empty);
   }
 
-  void Clinic::Address(const hstring& address)
+  void Clinic::Address(const hstring& address) noexcept
   {
-    m_Address = address;
+    m_Clinic.Address = address;
+  }
+
+  ::Cenedes::Models::Clinic& Clinic::Model() const noexcept
+  {
+    return const_cast<::Cenedes::Models::Clinic&>(m_Clinic);
   }
 }

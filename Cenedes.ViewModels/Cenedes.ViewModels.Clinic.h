@@ -2,6 +2,8 @@
 
 #include "Clinic.g.h"
 
+#include "Cenedes.Models.Clinic.h"
+
 namespace winrt::Cenedes::ViewModels::implementation
 {
   struct Clinic : ClinicT<Clinic>
@@ -9,23 +11,22 @@ namespace winrt::Cenedes::ViewModels::implementation
   public:
     Clinic() = default;
 
-    uint64_t ClinicId() const;
-    void ClinicId(const uint64_t clinic_id);
+    uint64_t ClinicId() const noexcept;
+    void ClinicId(const uint64_t clinic_id) noexcept;
 
-    hstring Name() const;
-    void Name(const hstring& name);
+    hstring Name() const noexcept;
+    void Name(const hstring& name) noexcept;
 
-    hstring Phone() const;
-    void Phone(const hstring& phone);
+    hstring Phone() const noexcept;
+    void Phone(const hstring& phone) noexcept;
 
-    hstring Address() const;
-    void Address(const hstring& address);
+    hstring Address() const noexcept;
+    void Address(const hstring& address) noexcept;
+
+    ::Cenedes::Models::Clinic& Model() const noexcept;
 
   private:
-    uint64_t m_ClinicId;
-    hstring  m_Name;
-    hstring  m_Phone;
-    hstring  m_Address;
+    ::Cenedes::Models::Clinic m_Clinic;
   };
 }
 

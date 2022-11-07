@@ -1,8 +1,10 @@
+import "Cenedes.ViewModels.idl";
+
 namespace Cenedes.ViewModels
 {
     [bindable]
     [default_interface]
-    runtimeclass Patient 
+    runtimeclass Patient : IModel
     {
         Patient();
     }

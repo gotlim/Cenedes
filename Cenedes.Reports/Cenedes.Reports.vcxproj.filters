@@ -17,7 +17,6 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Class.idl" />
     <Midl Include="Cenedes.Reports.idl" />
   </ItemGroup>
   <ItemGroup>

@@ -15,9 +15,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Cenedes.Helpers.String.h" />
+    <ClInclude Include="Cenedes.Helpers.Entity.h" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Class.idl" />
     <Midl Include="Cenedes.Helpers.idl" />
   </ItemGroup>
   <ItemGroup>

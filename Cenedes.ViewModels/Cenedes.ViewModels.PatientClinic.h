@@ -5,6 +5,10 @@
 #include "Cenedes.ViewModels.Patient.h"
 #include "Cenedes.ViewModels.Clinic.h"
 
+#include "Cenedes.Models.PatientClinic.h"
+
+using namespace Cenedes;
+
 namespace winrt::Cenedes::ViewModels::implementation
 {
   struct PatientClinic : PatientClinicT<PatientClinic>
@@ -27,15 +31,15 @@ namespace winrt::Cenedes::ViewModels::implementation
     ViewModels::Clinic Clinic() const;
     void Clinic(const ViewModels::Clinic& clinic);
 
-    winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& value);
+    Models::PatientClinic& Model() const noexcept;
+
+    winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
     void PropertyChanged(winrt::event_token const& token);
 
   private:
-    uint64_t            m_PatientClinicId;
-    uint64_t            m_PatientId;
-    ViewModels::Patient m_Patient;
-    uint64_t            m_ClinicId;
-    ViewModels::Clinic  m_Clinic;
+    Models::PatientClinic m_PatientClinic;
+    ViewModels::Patient   m_Patient;
+    ViewModels::Clinic    m_Clinic;
 
     winrt::event<Microsoft::UI::Xaml::Data::PropertyChangedEventHandler> m_PropertyChanged;
   };

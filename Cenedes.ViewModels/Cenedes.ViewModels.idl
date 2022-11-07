@@ -1,0 +1,7 @@
+namespace Cenedes.ViewModels
+{
+    interface IModel
+    {
+        Object Model { get; };
+    }
+}

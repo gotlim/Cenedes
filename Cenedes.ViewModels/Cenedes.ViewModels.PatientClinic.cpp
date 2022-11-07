@@ -8,28 +8,28 @@ namespace winrt::Cenedes::ViewModels::implementation
 {
   uint64_t PatientClinic::PatientClinicId() const
   {
-    return this->m_PatientClinicId;
+    return m_PatientClinic.PatientClinicId;
   }
 
   void PatientClinic::PatientClinicId(const uint64_t patient_clinic_id)
   {
-    if (this->m_PatientClinicId != patient_clinic_id)
+    if (m_PatientClinic.PatientClinicId != patient_clinic_id)
     {
-      this->m_PatientClinicId = patient_clinic_id;
+      m_PatientClinic.PatientClinicId = patient_clinic_id;
       m_PropertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs{ L"PatientClinicId" });
     }
   }
 
   uint64_t PatientClinic::PatientId() const
   {
-    return this->m_PatientId;
+    return m_PatientClinic.PatientId;
   }
 
   void PatientClinic::PatientId(const uint64_t patient_id)
   {
-    if (this->m_PatientId != patient_id)
+    if (m_PatientClinic.PatientId != patient_id)
     {
-      this->m_PatientId = patient_id;
+      m_PatientClinic.PatientId = patient_id;
       m_PropertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs{ L"PatientId" });
     }
   }
@@ -50,14 +50,14 @@ namespace winrt::Cenedes::ViewModels::implementation
 
   uint64_t PatientClinic::ClinicId() const
   {
-    return this->m_ClinicId;
+    return m_PatientClinic.ClinicId;
   }
 
   void PatientClinic::ClinicId(const uint64_t clinic_id)
   {
-    if (this->m_ClinicId != clinic_id)
+    if (m_PatientClinic.ClinicId != clinic_id)
     {
-      this->m_ClinicId = clinic_id;
+      m_PatientClinic.ClinicId = clinic_id;
       m_PropertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs{ L"ClinicId" });
     }
   }
@@ -84,5 +84,10 @@ namespace winrt::Cenedes::ViewModels::implementation
   void PatientClinic::PropertyChanged(winrt::event_token const& token)
   {
     this->m_PropertyChanged.remove(token);
+  }
+
+  Models::PatientClinic& PatientClinic::Model() const noexcept
+  {
+    return const_cast<Models::PatientClinic&>(m_PatientClinic);
   }
 }

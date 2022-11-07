@@ -2,11 +2,20 @@
 
 #include "Patient.g.h"
 
+#include "Cenedes.Models.Patient.h"
+
+using namespace Cenedes;
+
 namespace winrt::Cenedes::ViewModels::implementation
 {
   struct Patient : PatientT<Patient>
   {
+  public:
     Patient() = default;
+    IInspectable Model() const noexcept;
+
+  private:
+    Models::Patient m_Patient;
   };
 }
 
