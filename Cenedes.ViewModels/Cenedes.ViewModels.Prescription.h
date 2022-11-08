@@ -1,7 +1,10 @@
 ﻿#pragma once
 
 #include "Prescription.g.h"
+
 #include "Cenedes.ViewModels.Patient.h"
+
+#include <Cenedes.Models.Prescription.h>
 
 namespace winrt::Cenedes::ViewModels::implementation
 {
@@ -31,11 +34,8 @@ namespace winrt::Cenedes::ViewModels::implementation
     void PropertyChanged(winrt::event_token const& token);
 
   private:
-    uint64_t                      m_PrescriptionId;
-    uint64_t                      m_ConsultId;
-    uint64_t                      m_PatientId;
-    Cenedes::ViewModels::Patient  m_Patient;
-    Windows::Foundation::DateTime m_PrescriptionDate;
+    ::Cenedes::Models::Prescription m_Prescription;
+    ViewModels::Patient             m_Patient;
 
     winrt::event<Microsoft::UI::Xaml::Data::PropertyChangedEventHandler> m_PropertyChanged;
   };

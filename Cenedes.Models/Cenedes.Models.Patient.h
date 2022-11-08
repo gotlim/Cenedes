@@ -6,7 +6,7 @@ namespace Cenedes::Models
 {
   struct Patient : Person
   {
-    UInt64 PatientId;
+    UInt64 PatientId{ 0 };
 
     UInt64 GetId() const noexcept override
     {

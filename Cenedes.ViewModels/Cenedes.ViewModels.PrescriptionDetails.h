@@ -2,6 +2,8 @@
 
 #include "PrescriptionDetails.g.h"
 
+#include <Cenedes.Models.PrescriptionDetails.h>
+
 namespace winrt::Cenedes::ViewModels::implementation
 {
   struct PrescriptionDetails : PrescriptionDetailsT<PrescriptionDetails>
@@ -15,11 +17,11 @@ namespace winrt::Cenedes::ViewModels::implementation
     winrt::hstring Medicine() const;
     void Medicine(const winrt::hstring& medicine);
 
-    winrt::hstring MedicineAmountPerDay() const;
-    void MedicineAmountPerDay(const winrt::hstring& medicine_amount_per_day);
+    winrt::IReference<uint32_t> MedicineAmountPerDay() const;
+    void MedicineAmountPerDay(const Windows::Foundation::IReference<uint32_t>& medicine_amount_per_day);
 
-    Windows::Foundation::DateTime TimeTakeMedicine() const;
-    void TimeTakeMedicine(const Windows::Foundation::DateTime& time_take_medicine);
+    winrt::IReference<winrt::TimeSpan> TimeTakeMedicine() const;
+    void TimeTakeMedicine(const winrt::IReference<winrt::TimeSpan>& time_take_medicine);
 
     winrt::hstring MedicineDetails() const;
     void MedicineDetails(const winrt::hstring medicine_details);
@@ -36,14 +38,7 @@ namespace winrt::Cenedes::ViewModels::implementation
     void PropertyChanged(winrt::event_token const& token);
 
   private:
-    uint64_t                      m_PrescriptionId;
-    winrt::hstring                m_Medicine;
-    winrt::hstring                m_MedicineAmountPerDay;
-    Windows::Foundation::DateTime m_TimeTakeMedicine;
-    winrt::hstring                m_MedicineDetails;
-    Windows::Foundation::DateTime m_BeginDate;
-    Windows::Foundation::DateTime m_EndDate;
-
+    ::Cenedes::Models::PrescriptionDetails m_PrescriptionDetails;
     winrt::event<Microsoft::UI::Xaml::Data::PropertyChangedEventHandler> m_PropertyChanged;
   };
 }

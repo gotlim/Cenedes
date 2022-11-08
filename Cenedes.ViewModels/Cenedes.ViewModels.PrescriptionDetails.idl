@@ -11,10 +11,11 @@ namespace Cenedes.ViewModels
 
         UInt64   PrescriptionId;
         String   Medicine;
-        String   MedicineAmountPerDay;
-        DateTime TimeTakeMedicine;
         String   MedicineDetails;
         DateTime BeginDate;
         DateTime EndDate;
+
+        Windows.Foundation.IReference<UInt32> MedicineAmountPerDay;
+        Windows.Foundation.IReference<TimeSpan> TimeTakeMedicine;
     }
 }

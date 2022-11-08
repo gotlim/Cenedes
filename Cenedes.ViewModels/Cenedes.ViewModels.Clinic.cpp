@@ -52,4 +52,14 @@ namespace winrt::Cenedes::ViewModels::implementation
   {
     return reinterpret_cast<uint64_t>(std::addressof(m_Clinic));
   }
+
+  winrt::event_token Clinic::PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
+  {
+    return this->m_PropertyChanged.add(handler);
+  }
+
+  void Clinic::PropertyChanged(winrt::event_token const& token)
+  {
+    this->m_PropertyChanged.remove(token);
+  }
 }

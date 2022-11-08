@@ -5,7 +5,7 @@
 #include "Cenedes.ViewModels.Patient.h"
 #include "Cenedes.ViewModels.Clinic.h"
 
-#include "Cenedes.Models.PatientClinic.h"
+#include <Cenedes.Models.PatientClinic.h>
 
 namespace winrt::Cenedes::ViewModels::implementation
 {
