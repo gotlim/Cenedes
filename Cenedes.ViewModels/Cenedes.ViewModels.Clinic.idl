@@ -4,7 +4,7 @@ namespace Cenedes.ViewModels
 {
     [bindable]
     [default_interface]
-    runtimeclass Clinic : IModel
+    runtimeclass Clinic : IModel, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
     {
         Clinic();
         UInt64 ClinicId;

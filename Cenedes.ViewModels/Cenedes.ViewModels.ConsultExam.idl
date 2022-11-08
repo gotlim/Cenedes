@@ -4,8 +4,8 @@ namespace Cenedes.ViewModels
 {
     [bindable]
     [default_interface]
-    runtimeclass Patient : IModel, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    runtimeclass ConsultExam : IModel, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
     {
-        Patient();
+        ConsultExam();
     }
 }

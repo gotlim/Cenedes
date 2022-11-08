@@ -178,12 +178,68 @@
       <DependentUpon>Cenedes.ViewModels.Clinic.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.ClinicalReport.h">
+      <DependentUpon>Cenedes.ViewModels.ClinicalReport.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.Consult.h">
+      <DependentUpon>Cenedes.ViewModels.Consult.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.ConsultExam.h">
+      <DependentUpon>Cenedes.ViewModels.ConsultExam.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.Epicrisis.h">
+      <DependentUpon>Cenedes.ViewModels.Epicrisis.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.Exam.h">
+      <DependentUpon>Cenedes.ViewModels.Exam.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.Medic.h">
+      <DependentUpon>Cenedes.ViewModels.Medic.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.MedicalAppointment.h">
+      <DependentUpon>Cenedes.ViewModels.MedicalAppointment.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.MedicalSchedule.h">
+      <DependentUpon>Cenedes.ViewModels.MedicalSchedule.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.MedicalSpeciality.h">
+      <DependentUpon>Cenedes.ViewModels.MedicalSpeciality.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.MedicMedicialSpeciality.h">
+      <DependentUpon>Cenedes.ViewModels.MedicMedicialSpeciality.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.Nurse.h">
+      <DependentUpon>Cenedes.ViewModels.Nurse.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="Cenedes.ViewModels.Patient.h">
       <DependentUpon>Cenedes.ViewModels.Patient.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="Cenedes.ViewModels.PatientClinic.h">
       <DependentUpon>Cenedes.ViewModels.PatientClinic.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.PatientClinicDetails.h">
+      <DependentUpon>Cenedes.ViewModels.PatientClinicDetails.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.PatientExam.h">
+      <DependentUpon>Cenedes.ViewModels.PatientExam.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="Cenedes.ViewModels.Person.h">
+      <DependentUpon>Cenedes.ViewModels.Person.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="Cenedes.ViewModels.Prescription.h">
@@ -201,12 +257,68 @@
       <DependentUpon>Cenedes.ViewModels.Clinic.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.ClinicalReport.cpp">
+      <DependentUpon>Cenedes.ViewModels.ClinicalReport.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.Consult.cpp">
+      <DependentUpon>Cenedes.ViewModels.Consult.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.ConsultExam.cpp">
+      <DependentUpon>Cenedes.ViewModels.ConsultExam.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.Epicrisis.cpp">
+      <DependentUpon>Cenedes.ViewModels.Epicrisis.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.Exam.cpp">
+      <DependentUpon>Cenedes.ViewModels.Exam.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.Medic.cpp">
+      <DependentUpon>Cenedes.ViewModels.Medic.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.MedicalAppointment.cpp">
+      <DependentUpon>Cenedes.ViewModels.MedicalAppointment.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.MedicalSchedule.cpp">
+      <DependentUpon>Cenedes.ViewModels.MedicalSchedule.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.MedicalSpeciality.cpp">
+      <DependentUpon>Cenedes.ViewModels.MedicalSpeciality.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.MedicMedicialSpeciality.cpp">
+      <DependentUpon>Cenedes.ViewModels.MedicMedicialSpeciality.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.Nurse.cpp">
+      <DependentUpon>Cenedes.ViewModels.Nurse.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="Cenedes.ViewModels.Patient.cpp">
       <DependentUpon>Cenedes.ViewModels.Patient.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="Cenedes.ViewModels.PatientClinic.cpp">
       <DependentUpon>Cenedes.ViewModels.PatientClinic.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.PatientClinicDetails.cpp">
+      <DependentUpon>Cenedes.ViewModels.PatientClinicDetails.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.PatientExam.cpp">
+      <DependentUpon>Cenedes.ViewModels.PatientExam.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="Cenedes.ViewModels.Person.cpp">
+      <DependentUpon>Cenedes.ViewModels.Person.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="Cenedes.ViewModels.Prescription.cpp">
@@ -233,11 +345,53 @@
     <Midl Include="Cenedes.ViewModels.Clinic.idl">
       <SubType>Designer</SubType>
     </Midl>
+    <Midl Include="Cenedes.ViewModels.ClinicalReport.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.Consult.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.ConsultExam.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.Epicrisis.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.Exam.idl">
+      <SubType>Designer</SubType>
+    </Midl>
     <Midl Include="Cenedes.ViewModels.idl" />
+    <Midl Include="Cenedes.ViewModels.Medic.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.MedicalAppointment.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.MedicalSchedule.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.MedicalSpeciality.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.MedicMedicialSpeciality.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.Nurse.idl">
+      <SubType>Designer</SubType>
+    </Midl>
     <Midl Include="Cenedes.ViewModels.Patient.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="Cenedes.ViewModels.PatientClinic.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.PatientClinicDetails.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.PatientExam.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Cenedes.ViewModels.Person.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="Cenedes.ViewModels.Prescription.idl">

@@ -4,11 +4,6 @@
 #include "Patient.g.cpp"
 #endif
 
-#include "Cenedes.Helpers.String.h"
-
-using namespace Cenedes;
-using namespace Cenedes::Helpers;
-
 namespace winrt::Cenedes::ViewModels::implementation
 {
   uint64_t Patient::Model() const noexcept

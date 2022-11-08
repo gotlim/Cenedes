@@ -4,4 +4,10 @@ namespace Cenedes.ViewModels
     {
         UInt64 Model { get; };
     }
+
+    enum Sex
+    {
+        Male   = 1,
+        Female = 2
+    }
 }

@@ -4,7 +4,7 @@
 
 namespace Cenedes::Models
 {
-  struct Entity abstract : EntityBase
+  struct Entity abstract : public EntityBase
   {
     DateTime            CreatedDate;
     Nullable<DateTime>  ModifiedDate;

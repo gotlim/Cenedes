@@ -25,8 +25,13 @@ namespace winrt::Cenedes::ViewModels::implementation
 
     uint64_t Model() const noexcept;
 
+    winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
+    void PropertyChanged(winrt::event_token const& token);
+
   private:
     ::Cenedes::Models::Clinic m_Clinic;
+
+    winrt::event<Microsoft::UI::Xaml::Data::PropertyChangedEventHandler> m_PropertyChanged;
   };
 }
 

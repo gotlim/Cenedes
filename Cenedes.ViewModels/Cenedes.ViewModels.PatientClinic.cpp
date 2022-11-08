@@ -86,8 +86,8 @@ namespace winrt::Cenedes::ViewModels::implementation
     this->m_PropertyChanged.remove(token);
   }
 
-  Models::PatientClinic& PatientClinic::Model() const noexcept
+  uint64_t PatientClinic::Model() const noexcept
   {
-    return const_cast<Models::PatientClinic&>(m_PatientClinic);
+    return reinterpret_cast<uint64_t>(std::addressof(m_PatientClinic));
   }
 }

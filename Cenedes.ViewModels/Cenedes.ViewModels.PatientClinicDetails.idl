@@ -1,0 +1,11 @@
+import "Cenedes.ViewModels.idl";
+
+namespace Cenedes.ViewModels
+{
+    [bindable]
+    [default_interface]
+    runtimeclass PatientClinicDetails : IModel, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        PatientClinicDetails();
+    }
+}

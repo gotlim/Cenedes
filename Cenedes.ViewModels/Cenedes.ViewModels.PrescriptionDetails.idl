@@ -1,10 +1,11 @@
+import "Cenedes.ViewModels.idl";
 import "Cenedes.ViewModels.Types.idl";
 
 namespace Cenedes.ViewModels
 {
     [bindable]
     [default_interface]
-    runtimeclass PrescriptionDetails : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    runtimeclass PrescriptionDetails : IModel, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
     {
         PrescriptionDetails();
 

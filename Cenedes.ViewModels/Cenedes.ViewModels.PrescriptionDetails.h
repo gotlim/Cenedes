@@ -30,7 +30,9 @@ namespace winrt::Cenedes::ViewModels::implementation
     Windows::Foundation::DateTime EndDate() const;
     void EndDate(const Windows::Foundation::DateTime end_date);
 
-    winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& value);
+    uint64_t Model() const noexcept;
+
+    winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
     void PropertyChanged(winrt::event_token const& token);
 
   private:

@@ -1,3 +1,4 @@
+import "Cenedes.ViewModels.idl";
 import "Cenedes.ViewModels.Patient.idl";
 import "Cenedes.ViewModels.Clinic.idl";
 
@@ -5,7 +6,7 @@ namespace Cenedes.ViewModels
 {
     [bindable]
     [default_interface]
-    runtimeclass PatientClinic : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    runtimeclass PatientClinic : IModel, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
     {
         PatientClinic();
         UInt64  PatientClinicId;

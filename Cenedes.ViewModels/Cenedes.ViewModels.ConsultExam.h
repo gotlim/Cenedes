@@ -1,23 +1,23 @@
 ﻿#pragma once
 
-#include "Patient.g.h"
+#include "ConsultExam.g.h"
 
-#include <Cenedes.Models.Patient.h>
+#include <Cenedes.Models.ConsultExam.h>
 
 namespace winrt::Cenedes::ViewModels::implementation
 {
-  struct Patient : PatientT<Patient>
+  struct ConsultExam : ConsultExamT<ConsultExam>
   {
   public:
-    Patient() = default;
-    
+    ConsultExam() = default;
+
     uint64_t Model() const noexcept;
 
     winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
     void PropertyChanged(winrt::event_token const& token);
 
   private:
-    ::Cenedes::Models::Patient m_Patient;
+    ::Cenedes::Models::ConsultExam m_ConsultExam;
 
     winrt::event<Microsoft::UI::Xaml::Data::PropertyChangedEventHandler> m_PropertyChanged;
   };
@@ -25,7 +25,7 @@ namespace winrt::Cenedes::ViewModels::implementation
 
 namespace winrt::Cenedes::ViewModels::factory_implementation
 {
-  struct Patient : PatientT<Patient, implementation::Patient>
+  struct ConsultExam : ConsultExamT<ConsultExam, implementation::ConsultExam>
   {
   };
 }

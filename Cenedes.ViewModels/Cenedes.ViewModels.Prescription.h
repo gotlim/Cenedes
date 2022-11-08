@@ -25,7 +25,9 @@ namespace winrt::Cenedes::ViewModels::implementation
     Windows::Foundation::DateTime PrescriptionDate() const;
     void PrescriptionDate(const Windows::Foundation::DateTime& prescription_date);
 
-    winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& value);
+    uint64_t Model() const noexcept;
+
+    winrt::event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
     void PropertyChanged(winrt::event_token const& token);
 
   private:

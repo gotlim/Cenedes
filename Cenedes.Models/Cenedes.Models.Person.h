@@ -5,7 +5,7 @@
 
 namespace Cenedes::Models
 {
-  struct Person abstract : Entity
+  struct Person : public Entity
   {
     UInt64   PersonId;
     String   Carnet;

@@ -24,6 +24,20 @@
     <Midl Include="Cenedes.ViewModels.PatientClinic.idl" />
     <Midl Include="Cenedes.ViewModels.Clinic.idl" />
     <Midl Include="Cenedes.ViewModels.idl" />
+    <Midl Include="Cenedes.ViewModels.ClinicalReport.idl" />
+    <Midl Include="Cenedes.ViewModels.Consult.idl" />
+    <Midl Include="Cenedes.ViewModels.ConsultExam.idl" />
+    <Midl Include="Cenedes.ViewModels.Epicrisis.idl" />
+    <Midl Include="Cenedes.ViewModels.Exam.idl" />
+    <Midl Include="Cenedes.ViewModels.Medic.idl" />
+    <Midl Include="Cenedes.ViewModels.MedicalAppointment.idl" />
+    <Midl Include="Cenedes.ViewModels.MedicalSchedule.idl" />
+    <Midl Include="Cenedes.ViewModels.MedicalSpeciality.idl" />
+    <Midl Include="Cenedes.ViewModels.MedicMedicialSpeciality.idl" />
+    <Midl Include="Cenedes.ViewModels.Nurse.idl" />
+    <Midl Include="Cenedes.ViewModels.PatientClinicDetails.idl" />
+    <Midl Include="Cenedes.ViewModels.PatientExam.idl" />
+    <Midl Include="Cenedes.ViewModels.Person.idl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Cenedes.ViewModels.def" />
