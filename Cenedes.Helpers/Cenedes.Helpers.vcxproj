@@ -302,7 +302,9 @@
     <ClInclude Include="Cenedes.Helpers.Entity.h" />
     <ClInclude Include="Cenedes.Helpers.Extensions.h" />
     <ClInclude Include="Cenedes.Helpers.h" />
+    <ClInclude Include="Cenedes.Helpers.PatchValue.h" />
     <ClInclude Include="Cenedes.Helpers.String.h" />
+    <ClInclude Include="Cenedes.Helpers.Types.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

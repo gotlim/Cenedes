@@ -1,7 +1,12 @@
 #pragma once
 
-#include "Cenedes.Models.Types.h"
+#include "Cenedes.Helpers.Types.h"
 #include "Cenedes.Helpers.Entity.h"
+
+namespace Cenedes::Models
+{
+  using namespace Helpers::Types;
+}
 
 namespace Cenedes::Models
 {

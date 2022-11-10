@@ -322,13 +322,12 @@
     <ClInclude Include="Cenedes.Models.Prescription.h" />
     <ClInclude Include="Cenedes.Models.PrescriptionDetails.h" />
     <ClInclude Include="Cenedes.Models.Sex.h" />
-    <ClInclude Include="Cenedes.Models.Types.h" />
+    <ClInclude Include="Cenedes.Models.Updates.Exam.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DllMain.cpp" />
-    <ClCompile Include="Cenedes.Models.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

@@ -120,6 +120,17 @@ namespace Cenedes::Repository::ModernCpp::SQLite
   public:
 
     SQLiteConnection() noexcept = default;
+    ~SQLiteConnection() noexcept = default;
+
+    SQLiteConnection(SQLiteConnection&& other) noexcept : m_Handle{ std::move(other.m_Handle) }
+    {
+    }
+
+    SQLiteConnection& operator=(SQLiteConnection&& other) noexcept
+    {
+      m_Handle = std::move(other.m_Handle);
+      return *this;
+    }
 
     template <typename C>
     explicit SQLiteConnection(C const* const filename)
@@ -177,7 +188,7 @@ namespace Cenedes::Repository::ModernCpp::SQLite
       return sqlite3_last_insert_rowid(GetAbi());
     }
 
-    int32_t TotalChanges() const noexcept
+    sqlite3_int64 TotalChanges() const noexcept
     {
       return ::sqlite3_total_changes(GetAbi());
     }
@@ -675,6 +686,26 @@ namespace Cenedes::Repository::ModernCpp::SQLite
       }
     }
 
+    void Bind(int32_t const index, std::string_view const& value) const
+    {
+      Bind(index, value.data(), static_cast<int32_t>(value.size()));
+    }
+
+    void Bind(int32_t const index, std::wstring_view const& value) const
+    {
+      Bind(index, value.data(), static_cast<int32_t>(value.size() * sizeof(wchar_t)));
+    }
+
+    void Bind(int32_t const index, std::u8string_view const& value) const
+    {
+      Bind(index, value.data(), static_cast<int32_t>(value.size() * sizeof(char8_t)));
+    }
+
+    void Bind(int32_t const index, std::u16string_view const& value) const
+    {
+      Bind(index, value.data(), static_cast<int32_t>(value.size() * sizeof(char16_t)));
+    }
+
     void Bind(int32_t const index, std::nullptr_t) const
     {
       if (SQLITE_OK != sqlite3_bind_null(GetAbi(), index))
@@ -713,10 +744,7 @@ namespace Cenedes::Repository::ModernCpp::SQLite
     template <typename Clock, typename Duration = typename Clock::duration>
     void Bind(int32_t const index, const std::chrono::time_point<Clock, Duration>& value) const
     {
-      if (SQLITE_OK != sqlite3_bind_int64(GetAbi(), index, static_cast<sqlite3_int64>(value.time_since_epoch())))
-      {
-        ThrowLastError();
-      }
+      Bind(index, value.time_since_epoch());
     }
 
     template <typename ... Values>

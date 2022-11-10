@@ -2,7 +2,7 @@
 
 #include <winrt/Windows.Foundation.h>
 
-namespace Cenedes::Models
+namespace Cenedes::Helpers::Types
 {
   using Boolean = bool;
 
