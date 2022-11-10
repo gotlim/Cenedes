@@ -10,15 +10,12 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Cenedes.Repository.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Cenedes.Repository.SQLite.cpp" />
-    <ClCompile Include="Cenedes.Repository.SQLite.Iterator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cenedes.Repository.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Cenedes.Repository.SQLite.h" />
-    <ClInclude Include="Cenedes.Repository.SQLite.Iterator.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database\Cenedes.sqbpro" />
