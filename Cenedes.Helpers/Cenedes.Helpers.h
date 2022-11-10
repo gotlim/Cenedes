@@ -3,7 +3,7 @@
 namespace Cenedes::Helpers
 {
   template <class... T>
-  constexpr bool AlwaysFalse = false;
+  inline constexpr bool AlwaysFalse = false;
 }
 
 #include "Cenedes.Helpers.Extensions.h"

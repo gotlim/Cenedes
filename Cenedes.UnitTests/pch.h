@@ -43,3 +43,9 @@
 #include <charconv>
 #include <format>
 #include <concepts>
+
+namespace winrt
+{
+  using namespace Windows::Foundation;
+  using namespace Windows::Foundation::Collections;
+}

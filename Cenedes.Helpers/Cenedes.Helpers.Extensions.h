@@ -13,7 +13,7 @@ namespace Cenedes::Helpers::Extensions
     noexcept(noexcept(std::invoke(function, std::forward<Object>(object))))
     -> decltype(std::invoke(function, std::forward<Object>(object)))
   {
-    return std::invoke(function, object);
+    return std::invoke(function, std::forward<Object>(object));
   }
 
   template<typename Object, typename Field>

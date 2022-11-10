@@ -292,10 +292,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cenedes.Repository.h" />
+    <ClInclude Include="Cenedes.Repository.SQLite.h" />
+    <ClInclude Include="Cenedes.Repository.SQLite.Iterator.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cenedes.Repository.SQLite.cpp" />
+    <ClCompile Include="Cenedes.Repository.SQLite.Iterator.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Cenedes.Repository.cpp" />
     <ClCompile Include="pch.cpp">
@@ -316,6 +320,11 @@
     <ProjectReference Include="..\Cenedes.Models\Cenedes.Models.vcxproj">
       <Project>{e3cdd9f5-7847-4012-ab12-ec0e69ff9357}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\Cenedes.db" />
+    <None Include="Database\Cenedes.db.sql" />
+    <None Include="Database\Cenedes.sqbpro" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

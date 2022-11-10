@@ -3,77 +3,46 @@
     <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
         <application>
             <!--This Id value indicates the application supports Windows Vista functionality -->
-            <supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/>
+            <supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />
             <!--This Id value indicates the application supports Windows 7 functionality-->
-            <supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>
+            <supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />
             <!--This Id value indicates the application supports Windows 8 functionality-->
-            <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
+            <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />
             <!--This Id value indicates the application supports Windows 8.1 functionality-->
-            <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
+            <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />
             <!--This Id value indicates the application supports Windows 10 and 11 functionality-->
-            <maxversiontested Id="10.0.19041.0"/>
+            <maxversiontested Id="10.0.19041.0" />
             <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
         </application>
     </compatibility>
 
     <asmv3:file name="Cenedes.Application.exe">
-        <activatableClass
-            name="Cenedes.Application.App"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.Application.XamlMetaDataProvider"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.Application.MainWindow"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.Application.HomePage"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.Application.ExamPage"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-    </asmv3:file>
-
-    <asmv3:file name="Cenedes.BusinessLogic.dll">
-    </asmv3:file>
-
-    <asmv3:file name="Cenedes.Helpers.dll">
-    </asmv3:file>
-
-    <asmv3:file name="Cenedes.Models.dll">
-    </asmv3:file>
-
-    <asmv3:file name="Cenedes.Reports.dll">
-    </asmv3:file>
-
-    <asmv3:file name="Cenedes.Repository.dll">
+        <activatableClass name="Cenedes.Application.App" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.Application.XamlMetaDataProvider" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.Application.MainWindow" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.Application.HomePage" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.Application.ExamPage" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     </asmv3:file>
 
     <asmv3:file name="Cenedes.ViewModels.dll">
-        <activatableClass
-            name="Cenedes.ViewModels.Clinic"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.ViewModels.Patient"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.ViewModels.PatientClinic"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.ViewModels.Prescription"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
-        <activatableClass
-            name="Cenedes.ViewModels.PrescriptionDetails"
-            threadingModel="both"
-            xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Clinic" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.ClinicalReport" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Consult" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.ConsultExam" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Epicrisis" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Exam" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Medic" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.MedicMedicialSpeciality" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.MedicalAppointment" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.MedicalSchedule" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.MedicalSpeciality" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Nurse" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Patient" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.PatientClinic" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.PatientClinicDetails" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.PatientExam" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Person" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.Prescription" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+        <activatableClass name="Cenedes.ViewModels.PrescriptionDetails" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     </asmv3:file>
 </assembly>
