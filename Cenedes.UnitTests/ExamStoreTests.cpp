@@ -62,11 +62,23 @@ TEST(Repositories, ExamStore)
   exam.Name = L"Examen de la Locura";
   exam.ExamId = 2;
   exam.Price = 100;
-  EXPECT_NO_THROW(exam_store.CreateExam(exam));
+  EXPECT_NO_THROW(exam.ExamId = exam_store.CreateExam(exam));
 
-  for (int32_t index = 0; const auto & exam : exam_store.Exams())
+  auto generator_exams = exam_store.Exams();
+
+  for (int32_t index = 0; const auto & exam : generator_exams)
   {
-    EXPECT_EQ(exam.ExamId, ++index);
-    EXPECT_NE(exam.Name, Cenedes::Helpers::String::Empty);
+    EXPECT_EQ(exam.ExamId, (++index));
+    EXPECT_NE(exam.Name, winrt::to_hstring(Cenedes::Helpers::String::Empty));
   }
+
+  generator_exams = exam_store.Exams();
+  std::vector<Exam> vector1_exams(generator_exams.begin(), generator_exams.end());
+
+  exam_store.DeleteExam(1);
+
+  generator_exams = exam_store.Exams();
+  std::vector<Exam> vector2_exams(generator_exams.begin(), generator_exams.end());
+
+  EXPECT_EQ(vector1_exams.size() - 1, vector2_exams.size());
 }

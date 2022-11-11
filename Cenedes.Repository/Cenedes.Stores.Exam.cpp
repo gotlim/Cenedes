@@ -19,15 +19,20 @@ namespace Cenedes::Stores
   {
   }
 
+  uint64_t ExamStore::GetLastExamId()
+  {
+    SQLiteStatement statement(*Connection, L"Select Max(ExamId) From Exam");
+    return statement.Step(), statement.GetUInt64(ColumnIndex<0>);
+  }
+
   uint64_t ExamStore::CreateExam(const Models::Exam& exam)
   {
     Execute(*Connection,
       LR"Sql(
-        Insert Into Exam (Name, Price, CreatedDate, ModifiedDate, DeletedDate, IsEdit, IsDelete)
-        Values (?, ?, ?, ?, ?, ?, ?)
-      )Sql",
-      exam.ExamId, exam.Name, exam.Price, Models::DateTime::clock::now(),
-      nullptr, nullptr, false, false
+        Insert Into Exam (ExamId, Name, Price, CreatedDate, ModifiedDate, DeletedDate, IsEdit, IsDelete)
+        Values (?, ?, ?, ?, ?, ?, ?, ?)
+      )Sql", GetLastExamId() + 1, exam.Name, exam.Price,
+      Models::DateTime::clock::now(), nullptr, nullptr, false, false
     );
 
     return Connection->RowId();
@@ -35,13 +40,14 @@ namespace Cenedes::Stores
 
   bool ExamStore::UpdateExam(const uint64_t exam_id, const Models::Updates::Exam& exam)
   {
+    if (not ModelHasUpdate(exam.Name, exam.Price)) { return false; }
     if (not ExistsExam(exam_id)) { return false; }
 
     wchar_t sql_query[256] = { L'\0' };
 
-    swprintf_s(sql_query, L"Update Exam %s %s Where ExamId = ?",
-      (exam.Name ? SQLiteSet(Name, L) : Empty),
-      (exam.Price ? SQLiteSet(Price, L) : Empty)
+    swprintf_s(sql_query, L"Update Exam Set %s %s Where ExamId = ?",
+      (exam.Name ? L"Name = ?," : Empty),
+      (exam.Price ? L"Price = ?" : Empty)
     );
 
     SQLiteStatement statement(*Connection, sql_query);
@@ -103,7 +109,7 @@ namespace Cenedes::Stores
     return std::nullopt;
   }
 
-  std::experimental::generator<Models::Exam> ExamStore::Exams()
+  Coroutines::Generator<Models::Exam> ExamStore::Exams()
   {
     for (SQLiteRow row : SQLiteStatement(*Connection, L"Select * From Exam"))
     {

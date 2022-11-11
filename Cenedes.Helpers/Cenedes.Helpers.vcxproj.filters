@@ -21,5 +21,6 @@
     <ClInclude Include="Cenedes.Helpers.Types.h" />
     <ClInclude Include="Cenedes.Helpers.PatchValue.h" />
     <ClInclude Include="Cenedes.Helpers.Concepts.h" />
+    <ClInclude Include="Cenedes.Coroutine.Generator.h" />
   </ItemGroup>
 </Project>

@@ -32,6 +32,8 @@
     <CppWinRTLibs>true</CppWinRTLibs>
     <CppWinRTFastAbi>true</CppWinRTFastAbi>
     <CppWinRTOptimized>true</CppWinRTOptimized>
+    <CppWinRTVerbosity>high</CppWinRTVerbosity>
+    <CppWinRTEnableLegacyCoroutines>false</CppWinRTEnableLegacyCoroutines>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -121,6 +123,7 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Application\;$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).BusinessLogic\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -145,6 +148,7 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Application\;$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).BusinessLogic\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -168,6 +172,7 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Application\;$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).BusinessLogic\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -193,6 +198,7 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Application\;$(SolutionDir)$(SolutionName).BusinessLogic\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Reports\;$(SolutionDir)$(SolutionName).Repository\;$(SolutionDir)$(SolutionName).ViewModels\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Application\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).BusinessLogic\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Helpers\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Models\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Reports\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).Repository\Generated Files\;$(SolutionDir)\Build\Obj\$(Platform)\$(Configuration)\$(SolutionName).ViewModels\Generated Files\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

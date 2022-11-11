@@ -6,11 +6,12 @@
 namespace Cenedes::Helpers
 {
   template<typename Type>
-    requires std::is_default_constructible_v<Type> and std::is_copy_assignable_v<Type>
+    requires std::is_default_constructible_v<Type>and std::is_copy_assignable_v<Type>
   class PatchValue
   {
   public:
     using value_type = Type;
+    using patch_value = PatchValue<Type>;
 
     PatchValue() noexcept : m_Value{ }, m_HasValue{ false }
     {
