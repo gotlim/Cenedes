@@ -8,11 +8,11 @@
     <Filter Include="Database">
       <UniqueIdentifier>{dcf73cfe-f8a3-45a7-b1bc-bb4b4e823ceb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Repository">
-      <UniqueIdentifier>{59d1029a-c36a-4569-8175-fbe7c7be43c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Stores">
       <UniqueIdentifier>{217d0d83-639e-4ce7-b43b-ef06957825ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQLite">
+      <UniqueIdentifier>{59d1029a-c36a-4569-8175-fbe7c7be43c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -21,21 +21,15 @@
     <ClCompile Include="Cenedes.Stores.Exam.cpp">
       <Filter>Stores</Filter>
     </ClCompile>
-    <ClCompile Include="Cenedes.Repository.cpp">
-      <Filter>Repository</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Cenedes.Repository.h">
-      <Filter>Repository</Filter>
+    <ClInclude Include="Cenedes.SQLite.h">
+      <Filter>SQLite</Filter>
     </ClInclude>
-    <ClInclude Include="Cenedes.Repository.SQLite.h">
-      <Filter>Repository</Filter>
-    </ClInclude>
-    <ClInclude Include="Cenedes.Repository.SQLite.Handle.h">
-      <Filter>Repository</Filter>
+    <ClInclude Include="Cenedes.SQLite.Handle.h">
+      <Filter>SQLite</Filter>
     </ClInclude>
     <ClInclude Include="Cenedes.Stores.Exports.Api.h">
       <Filter>Stores</Filter>
@@ -43,7 +37,13 @@
     <ClInclude Include="Cenedes.Stores.Exam.h">
       <Filter>Stores</Filter>
     </ClInclude>
-    <ClInclude Include="Cenedes.Stores.ColumnIndex.h">
+    <ClInclude Include="Cenedes.Stores.Constants.h">
+      <Filter>Stores</Filter>
+    </ClInclude>
+    <ClInclude Include="Cenedes.Stores.h">
+      <Filter>Stores</Filter>
+    </ClInclude>
+    <ClInclude Include="Cenedes.Stores.Helpers.h">
       <Filter>Stores</Filter>
     </ClInclude>
   </ItemGroup>

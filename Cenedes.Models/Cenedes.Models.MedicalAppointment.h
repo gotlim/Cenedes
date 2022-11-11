@@ -16,15 +16,5 @@ namespace Cenedes::Models
 
     Nullable<Patient> Patient;
     Nullable<Medic>   Medic;
-
-    UInt64 GetId() const noexcept override
-    {
-      return MedicalAppointmentId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      MedicalAppointmentId = Id;
-    }
   };
 }

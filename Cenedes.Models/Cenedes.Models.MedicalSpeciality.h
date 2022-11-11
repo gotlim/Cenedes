@@ -8,15 +8,5 @@ namespace Cenedes::Models
   {
     UInt64 MedicalSpecialityId;
     String Name;
-
-    UInt64 GetId() const noexcept override
-    {
-      return MedicalSpecialityId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      MedicalSpecialityId = Id;
-    }
   };
 }

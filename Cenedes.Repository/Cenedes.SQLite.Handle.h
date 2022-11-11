@@ -1,15 +1,15 @@
 #pragma once
 
 #ifdef _DEBUG
-#include <crtdbg.h>
-#define ASSERT _ASSERTE
+  #include <crtdbg.h>
+  #define ASSERT _ASSERTE
 #else
-#define ASSERT __noop
+  #define ASSERT __noop
 #endif
 
 #include <concepts>
 
-namespace Cenedes::Repository::ModernCpp::SQLite
+namespace Cenedes::Stores::SQLite
 {
   template<typename Type>
   concept SQLiteEnum = std::is_enum_v<Type>;

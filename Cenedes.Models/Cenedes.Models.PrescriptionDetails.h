@@ -16,15 +16,5 @@ namespace Cenedes::Models
     DateTime           EndDate;
 
     Nullable<Prescription> Prescription;
-
-    UInt64 GetId() const noexcept override
-    {
-      return PrescriptionDetailId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      PrescriptionDetailId = Id;
-    }
   };
 }

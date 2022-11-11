@@ -29,7 +29,7 @@
 #include <Cenedes.Helpers.h>
 #include <Cenedes.Models.h>
 #include <Cenedes.Reports.h>
-#include <Cenedes.Repository.h>
+#include <Cenedes.Stores.h>
 
 #pragma pop_macro("GetCurrentTime")
 #pragma pop_macro("X64")

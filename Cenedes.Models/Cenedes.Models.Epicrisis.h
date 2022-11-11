@@ -27,15 +27,5 @@ namespace Cenedes::Models
     Nullable<Prescription> Prescription;
     Nullable<Patient>      Patient;
     Nullable<Medic>        Medic;
-
-    UInt64 GetId() const noexcept override
-    {
-      return EpicrisisId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      EpicrisisId = Id;
-    }
   };
 }

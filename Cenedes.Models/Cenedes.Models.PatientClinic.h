@@ -13,15 +13,5 @@ namespace Cenedes::Models
     Nullable<DateTime> ApproximateDate;
     Nullable<Patient>  Patient;
     Nullable<Clinic>   Clinic;
-
-    UInt64 GetId() const noexcept override
-    {
-      return PatientClinicId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      PatientClinicId = Id;
-    }
   };
 }

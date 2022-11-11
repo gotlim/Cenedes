@@ -16,15 +16,5 @@ namespace Cenedes::Models
     Sex      Sex;
     String   Address;
     Nullable<String> Phone;
-
-    UInt64 GetId() const noexcept override
-    {
-      return PersonId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      PersonId = Id;
-    }
   };
 }

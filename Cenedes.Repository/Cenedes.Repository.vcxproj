@@ -331,19 +331,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Cenedes.Stores.ColumnIndex.h" />
-    <ClInclude Include="Cenedes.Repository.h" />
-    <ClInclude Include="Cenedes.Repository.SQLite.h" />
-    <ClInclude Include="Cenedes.Repository.SQLite.Handle.h" />
+    <ClInclude Include="Cenedes.Stores.Constants.h" />
+    <ClInclude Include="Cenedes.Stores.h" />
+    <ClInclude Include="Cenedes.SQLite.h" />
+    <ClInclude Include="Cenedes.SQLite.Handle.h" />
     <ClInclude Include="Cenedes.Stores.Exam.h" />
     <ClInclude Include="Cenedes.Stores.Exports.Api.h" />
+    <ClInclude Include="Cenedes.Stores.Helpers.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cenedes.Stores.Exam.cpp" />
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="Cenedes.Repository.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

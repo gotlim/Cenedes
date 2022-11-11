@@ -6,7 +6,7 @@
 namespace Cenedes::Helpers
 {
   template<typename Type>
-    requires std::is_default_constructible_v<Type>
+    requires std::is_default_constructible_v<Type> and std::is_copy_assignable_v<Type>
   class PatchValue
   {
   public:
@@ -18,6 +18,13 @@ namespace Cenedes::Helpers
 
     PatchValue(const Type& value) noexcept : m_Value{ value }, m_HasValue{ true }
     {
+    }
+
+    PatchValue& operator=(const Type& value) noexcept
+    {
+      m_Value = value;
+      m_HasValue = true;
+      return *this;
     }
 
     template<typename Self>
@@ -47,6 +54,12 @@ namespace Cenedes::Helpers
     bool HasValue() const noexcept
     {
       return m_HasValue;
+    }
+
+    void Reset()
+    {
+      m_Value = Type();
+      m_HasValue = false;
     }
 
   private:

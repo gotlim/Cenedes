@@ -12,15 +12,5 @@ namespace Cenedes::Models
     UInt64           ExamId;
     DateTime         ExamDate;
     Nullable<Double> Price;
-
-    UInt64 GetId() const noexcept override
-    {
-      return ConsultExamId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      ConsultExamId = Id;
-    }
   };
 }

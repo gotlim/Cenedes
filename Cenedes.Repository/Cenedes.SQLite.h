@@ -1,15 +1,8 @@
 #pragma once
 
-#include "Cenedes.Repository.SQLite.Handle.h"
+#include "Cenedes.SQLite.Handle.h"
 
-#if __has_include(<winsqlite/winsqlite3.h>)
 #include <winsqlite/winsqlite3.h>
-#pragma comment( lib, "winsqlite3.lib" )
-#elif __has_include(<sqlite3.h>)
-#include <sqlite3.h>
-#else
-#error The content of <sqlite3.h> must be installed.
-#endif
 
 #include <string>
 #include <string_view>
@@ -24,7 +17,7 @@
 #define VERIFY_(result, expression) (expression)
 #endif
 
-namespace Cenedes::Repository::ModernCpp::SQLite
+namespace Cenedes::Stores::SQLite
 {
   enum class SQLiteType
   {
@@ -456,9 +449,7 @@ namespace Cenedes::Repository::ModernCpp::SQLite
     {
       ASSERT(connection);
 
-      std::basic_string_view<C> sql = text;
-
-      if (SQLITE_OK != prepare(connection.GetAbi(), sql.data(), sql.size() * sizeof(C), m_Handle.Set(), nullptr))
+      if (SQLITE_OK != prepare(connection.GetAbi(), text, -1, m_Handle.Set(), nullptr))
       {
         connection.ThrowLastError();
       }
@@ -648,6 +639,11 @@ namespace Cenedes::Repository::ModernCpp::SQLite
       Bind(index, value.c_str(), static_cast<int32_t>(value.size() * sizeof(wchar_t)));
     }
 
+    void Bind(int32_t const index, winrt::hstring const& value) const
+    {
+      Bind(index, value.c_str(), static_cast<int32_t>(value.size() * sizeof(winrt::hstring::value_type)));
+    }
+
     void Bind(int32_t const index, std::u8string const& value) const
     {
       Bind(index, value.c_str(), static_cast<int32_t>(value.size() * sizeof(char8_t)));
@@ -669,6 +665,14 @@ namespace Cenedes::Repository::ModernCpp::SQLite
     void Bind(int32_t const index, std::wstring&& value) const
     {
       if (SQLITE_OK != sqlite3_bind_text16(GetAbi(), index, value.c_str(), static_cast<int32_t>(value.size() * sizeof(wchar_t)), SQLITE_TRANSIENT))
+      {
+        ThrowLastError();
+      }
+    }
+
+    void Bind(int32_t const index, winrt::hstring&& value) const
+    {
+      if (SQLITE_OK != sqlite3_bind_text16(GetAbi(), index, value.c_str(), static_cast<int32_t>(value.size() * sizeof(winrt::hstring::value_type)), SQLITE_TRANSIENT))
       {
         ThrowLastError();
       }

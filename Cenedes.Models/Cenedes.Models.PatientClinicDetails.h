@@ -10,15 +10,5 @@ namespace Cenedes::Models
     UInt64           PatientClinicId;
     Nullable<String> MedicName;
     String           Description;
-
-    UInt64 GetId() const noexcept override
-    {
-      return PatientClinicDetailId;
-    }
-
-    void SetId(const UInt64 Id) noexcept override
-    {
-      PatientClinicDetailId = Id;
-    }
   };
 }

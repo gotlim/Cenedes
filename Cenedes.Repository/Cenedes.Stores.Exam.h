@@ -9,8 +9,9 @@
 #endif
 
 #include <memory>
+
 #include <Cenedes.Models.h>
-#include "Cenedes.Repository.SQLite.h"
+#include "Cenedes.SQLite.h"
 #include "Cenedes.Stores.Exports.Api.h"
 
 namespace Cenedes::Stores
@@ -18,7 +19,7 @@ namespace Cenedes::Stores
   struct CENEDES_STORES_API ExamStore
   {
   public:
-    ExamStore(const std::shared_ptr<Repository::ModernCpp::SQLite::SQLiteConnection>& connection);
+    ExamStore(const std::shared_ptr<SQLite::SQLiteConnection>& connection);
     uint64_t CreateExam(const Models::Exam& exam);
     bool UpdateExam(const uint64_t exam_id, const Models::Updates::Exam& exam);
     bool DeleteExam(const uint64_t exam_id);
@@ -27,6 +28,6 @@ namespace Cenedes::Stores
     std::experimental::generator<Models::Exam> Exams();
 
   private:
-    std::shared_ptr<Repository::ModernCpp::SQLite::SQLiteConnection> Connection;
+    std::shared_ptr<SQLite::SQLiteConnection> Connection;
   };
 }
