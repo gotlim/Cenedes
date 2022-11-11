@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Cenedes.Helpers.Concepts.h"
+
 #include <utility>
 #include <concepts>
 #include <functional>

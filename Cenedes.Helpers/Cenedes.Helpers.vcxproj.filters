@@ -20,5 +20,6 @@
     <ClInclude Include="Cenedes.Helpers.Extensions.h" />
     <ClInclude Include="Cenedes.Helpers.Types.h" />
     <ClInclude Include="Cenedes.Helpers.PatchValue.h" />
+    <ClInclude Include="Cenedes.Helpers.Concepts.h" />
   </ItemGroup>
 </Project>

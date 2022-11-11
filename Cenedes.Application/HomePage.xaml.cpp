@@ -4,8 +4,16 @@
 #include "HomePage.g.cpp"
 #endif
 
+#include <filesystem>
+#include <Cenedes.Stores.Exam.h>
+
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
+
+namespace DatabaseApi = ::Cenedes::Repository::ModernCpp::SQLite;
+namespace Helpers = ::Cenedes::Helpers;
+namespace Models = ::Cenedes::Models;
+namespace Stores = ::Cenedes::Stores;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -26,6 +34,13 @@ namespace winrt::Cenedes::Application::implementation
 
   fire_and_forget HomePage::ButtonClick(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
   {
+    // auto file_path = std::filesystem::current_path() / "Cenedes.db";
+    // auto connection = std::make_shared<DatabaseApi::SQLiteConnection>(file_path.c_str());
+    // Models::Exam exam;
+    // exam.Name = L"Examen de Sangre";
+    // Stores::ExamStore exam_store(connection);
+    // exam.ExamId = exam_store.CreateExam(exam);
+
     Microsoft::UI::Xaml::Controls::ContentDialog content_dialog;
     content_dialog.XamlRoot(this->XamlRoot());
     content_dialog.Title(box_value(L"Título del Diálogo"));

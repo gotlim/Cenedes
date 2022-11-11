@@ -2,10 +2,11 @@
 
 #include "Cenedes.Repository.SQLite.Handle.h"
 
-#if __has_include(<sqlite3.h>)
-#include <sqlite3.h>
-#elif __has_include(<winsqlite/winsqlite3.h>)
+#if __has_include(<winsqlite/winsqlite3.h>)
 #include <winsqlite/winsqlite3.h>
+#pragma comment( lib, "winsqlite3.lib" )
+#elif __has_include(<sqlite3.h>)
+#include <sqlite3.h>
 #else
 #error The content of <sqlite3.h> must be installed.
 #endif
@@ -285,9 +286,10 @@ namespace Cenedes::Repository::ModernCpp::SQLite
       return (sqlite3_uint64)::sqlite3_column_int64(static_cast<T const*>(this)->GetAbi(), column);
     }
 
-    time_t GetDateTime(int32_t const column = 0) const noexcept
+    template<typename DateTime>
+    DateTime GetDateTime(int32_t const column = 0) const noexcept requires requires { typename DateTime::duration; }
     {
-      return (time_t)::sqlite3_column_int64(static_cast<T const*>(this)->GetAbi(), column);
+      return DateTime(DateTime::duration(::sqlite3_column_int64(static_cast<T const*>(this)->GetAbi(), column)));
     }
 
     double GetDouble(int32_t const column = 0) const noexcept
@@ -454,7 +456,9 @@ namespace Cenedes::Repository::ModernCpp::SQLite
     {
       ASSERT(connection);
 
-      if (SQLITE_OK != prepare(connection.GetAbi(), text, -1, m_Handle.Set(), nullptr))
+      std::basic_string_view<C> sql = text;
+
+      if (SQLITE_OK != prepare(connection.GetAbi(), sql.data(), sql.size() * sizeof(C), m_Handle.Set(), nullptr))
       {
         connection.ThrowLastError();
       }
@@ -825,5 +829,11 @@ namespace Cenedes::Repository::ModernCpp::SQLite
   inline void Execute(SQLiteConnection const& connection, C const* const text, Values && ... values)
   {
     SQLiteStatement(connection, text, std::forward<Values>(values) ...).Execute();
+  }
+
+  template <typename C, typename Traits, typename ... Values>
+  inline void Execute(SQLiteConnection const& connection, const std::basic_string_view<C, Traits> text, Values && ... values)
+  {
+    SQLiteStatement(connection, text.data(), std::forward<Values>(values) ...).Execute();
   }
 }

@@ -178,8 +178,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -197,8 +198,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -216,8 +218,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -235,8 +238,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -254,8 +258,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -273,8 +278,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -292,8 +298,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -311,8 +318,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -328,6 +336,7 @@
     <ClInclude Include="Cenedes.Repository.SQLite.h" />
     <ClInclude Include="Cenedes.Repository.SQLite.Handle.h" />
     <ClInclude Include="Cenedes.Stores.Exam.h" />
+    <ClInclude Include="Cenedes.Stores.Exports.Api.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

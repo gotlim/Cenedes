@@ -5,25 +5,57 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Database">
+      <UniqueIdentifier>{dcf73cfe-f8a3-45a7-b1bc-bb4b4e823ceb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Repository">
+      <UniqueIdentifier>{59d1029a-c36a-4569-8175-fbe7c7be43c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stores">
+      <UniqueIdentifier>{217d0d83-639e-4ce7-b43b-ef06957825ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="Cenedes.Repository.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Cenedes.Stores.Exam.cpp" />
+    <ClCompile Include="Cenedes.Stores.Exam.cpp">
+      <Filter>Stores</Filter>
+    </ClCompile>
+    <ClCompile Include="Cenedes.Repository.cpp">
+      <Filter>Repository</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cenedes.Repository.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Cenedes.Repository.SQLite.h" />
-    <ClInclude Include="Cenedes.Repository.SQLite.Handle.h" />
-    <ClInclude Include="Cenedes.Stores.Exam.h" />
-    <ClInclude Include="Cenedes.Stores.ColumnIndex.h" />
+    <ClInclude Include="Cenedes.Repository.h">
+      <Filter>Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="Cenedes.Repository.SQLite.h">
+      <Filter>Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="Cenedes.Repository.SQLite.Handle.h">
+      <Filter>Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="Cenedes.Stores.Exports.Api.h">
+      <Filter>Stores</Filter>
+    </ClInclude>
+    <ClInclude Include="Cenedes.Stores.Exam.h">
+      <Filter>Stores</Filter>
+    </ClInclude>
+    <ClInclude Include="Cenedes.Stores.ColumnIndex.h">
+      <Filter>Stores</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Database\Cenedes.sqbpro" />
-    <None Include="Database\Cenedes.db.sql" />
-    <None Include="Database\Cenedes.db" />
+    <None Include="Database\Cenedes.db.sql">
+      <Filter>Database</Filter>
+    </None>
+    <None Include="Database\Cenedes.db">
+      <Filter>Database</Filter>
+    </None>
+    <None Include="Database\Cenedes.sqbpro">
+      <Filter>Database</Filter>
+    </None>
   </ItemGroup>
 </Project>

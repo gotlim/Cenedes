@@ -299,6 +299,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Cenedes.Helpers.Concepts.h" />
     <ClInclude Include="Cenedes.Helpers.Entity.h" />
     <ClInclude Include="Cenedes.Helpers.Extensions.h" />
     <ClInclude Include="Cenedes.Helpers.h" />
