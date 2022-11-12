@@ -773,6 +773,8 @@ namespace Cenedes::Stores::SQLite
       return m_Statement;
     }
 
+    SQLiteRow() noexcept = default;
+
     SQLiteRow(sqlite3_stmt* const statement) noexcept : m_Statement(statement)
     {
     }
@@ -792,6 +794,7 @@ namespace Cenedes::Stores::SQLite
       if (statement.Step())
       {
         m_Statement = &statement;
+        m_Row = SQLiteRow(statement.GetAbi());
       }
     }
 
@@ -810,12 +813,18 @@ namespace Cenedes::Stores::SQLite
       return m_Statement != other.m_Statement;
     }
 
-    SQLiteRow operator *() const noexcept
+    SQLiteRow operator*() const noexcept
     {
       return SQLiteRow(m_Statement->GetAbi());
     }
 
+    const SQLiteRow* operator->() const noexcept
+    {
+      return &m_Row;
+    }
+
   private:
+    SQLiteRow m_Row;
     SQLiteStatement const* m_Statement = nullptr;
   };
 

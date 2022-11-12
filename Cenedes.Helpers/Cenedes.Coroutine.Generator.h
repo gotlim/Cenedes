@@ -1,10 +1,15 @@
 #ifndef AA77ADD6_B5B4_40A9_9DCB_EBBAC4AC5AB2
 #define AA77ADD6_B5B4_40A9_9DCB_EBBAC4AC5AB2
 
+#include <winrt/base.h>
+
 #include <concepts>
-#include <coroutine>
 #include <stdexcept>
 #include <variant>
+
+#ifdef __cpp_lib_coroutine
+  #include <coroutine>
+#endif
 
 namespace Cenedes::Coroutines
 {
@@ -22,17 +27,17 @@ namespace Cenedes::Coroutines
         return *this;
       }
 
-      std::suspend_always initial_suspend()
+      winrt::impl::suspend_always initial_suspend()
       {
         return {};
       }
 
-      std::suspend_always final_suspend() noexcept
+      winrt::impl::suspend_always final_suspend() noexcept
       {
         return {};
       }
 
-      std::suspend_always yield_value(T const& other)
+      winrt::impl::suspend_always yield_value(T const& other)
       {
         value = std::addressof(other);
         return {};
@@ -99,7 +104,7 @@ namespace Cenedes::Coroutines
       }
     }
 
-    using handle_type = std::coroutine_handle<promise_type>;
+    using handle_type = winrt::impl::coroutine_handle<promise_type>;
 
     handle_type handle{ nullptr };
 

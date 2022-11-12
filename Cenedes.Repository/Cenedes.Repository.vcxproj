@@ -179,7 +179,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -199,7 +198,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -219,7 +217,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -239,7 +236,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -259,7 +255,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -279,7 +274,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -299,7 +293,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -319,7 +312,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Models\;$(SolutionDir)$(SolutionName).Helpers\;$(SolutionDir)Library\SQLite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>CENEDES_STORES_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

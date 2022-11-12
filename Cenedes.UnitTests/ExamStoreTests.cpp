@@ -66,16 +66,20 @@ TEST(Repositories, ExamStore)
 
   auto generator_exams = exam_store.Exams();
 
+  SQLiteStatement statement_exam_ids(*connection, "Select ExamId From Exam");
+  auto examid_it = begin(statement_exam_ids);
+
   for (int32_t index = 0; const auto & exam : generator_exams)
   {
-    EXPECT_EQ(exam.ExamId, (++index));
+    EXPECT_EQ(exam.ExamId, (examid_it->GetUInt64()));
     EXPECT_NE(exam.Name, winrt::to_hstring(Cenedes::Helpers::String::Empty));
+    ++examid_it;
   }
 
   generator_exams = exam_store.Exams();
   std::vector<Exam> vector1_exams(generator_exams.begin(), generator_exams.end());
 
-  exam_store.DeleteExam(1);
+  exam_store.DeleteExam(exam_store.GetLastExamId());
 
   generator_exams = exam_store.Exams();
   std::vector<Exam> vector2_exams(generator_exams.begin(), generator_exams.end());

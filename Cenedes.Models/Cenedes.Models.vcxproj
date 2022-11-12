@@ -179,7 +179,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -196,7 +195,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -213,7 +211,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -230,7 +227,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -247,7 +243,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -264,7 +259,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -281,7 +275,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -298,7 +291,6 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
