@@ -23,4 +23,7 @@
     <ClInclude Include="Cenedes.Helpers.Concepts.h" />
     <ClInclude Include="Cenedes.Coroutine.Generator.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
