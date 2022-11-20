@@ -5,12 +5,14 @@
 
 namespace Cenedes::Models
 {
-  struct ConsultExam : Entity
+  struct ConsultExam : public Entity
   {
-    UInt64           ConsultExamId;
-    UInt64           ConsultId;
-    UInt64           ExamId;
-    DateTime         ExamDate;
-    Nullable<Double> Price;
+    EntityIdType      ConsultExamId;
+    EntityIdType      ConsultId;
+    Nullable<Consult> Consult;
+    EntityIdType      ExamId;
+    Nullable<Exam>    Exam;
+    DateTime          ExamDate;
+    Double            Price;
   };
 }

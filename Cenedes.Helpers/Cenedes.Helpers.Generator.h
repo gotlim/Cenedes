@@ -11,7 +11,7 @@
   #include <coroutine>
 #endif
 
-namespace Cenedes::Coroutines
+namespace Cenedes::Helpers::Coroutines
 {
   // https://github.com/lewissbaker/cppcoro
   // https://en.cppreference.com/w/cpp/language/coroutines

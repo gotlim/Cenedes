@@ -4,13 +4,16 @@
 #include "Cenedes.Stores.Helpers.h"
 #include "Cenedes.Stores.Constants.h"
 
+#include "Cenedes.Helpers.Entities.h"
+#include "Cenedes.Helpers.Strings.h"
+
 #include <sstream>
 
 using namespace Cenedes::Stores::SQLite;
 
-using namespace Cenedes::Helpers::Entity;
+using namespace Cenedes::Helpers::Entities;
+using namespace Cenedes::Helpers::Strings;
 using namespace Cenedes::Helpers::Types;
-using namespace Cenedes::Helpers::String;
 
 namespace Cenedes::Stores
 {
@@ -38,7 +41,7 @@ namespace Cenedes::Stores
     return Connection->RowId();
   }
 
-  bool ExamStore::UpdateExam(const uint64_t exam_id, const Models::Updates::Exam& exam)
+  bool ExamStore::UpdateExam(const uint64_t exam_id, const Models::UpdateExam& exam)
   {
     if (not ModelHasUpdate(exam.Name, exam.Price)) { return false; }
     if (not ExistsExam(exam_id)) { return false; }
@@ -46,8 +49,8 @@ namespace Cenedes::Stores
     wchar_t sql_query[256] = { L'\0' };
 
     swprintf_s(sql_query, L"Update Exam Set %s %s Where ExamId = ?",
-      (exam.Name ? L"Name = ?," : Empty),
-      (exam.Price ? L"Price = ?" : Empty)
+      (exam.Name ? L"Name = ?," : WEmpty),
+      (exam.Price ? L"Price = ?" : WEmpty)
     );
 
     SQLiteStatement statement(*Connection, sql_query);
@@ -76,9 +79,7 @@ namespace Cenedes::Stores
 
     exam.Name = statement.GetWideString(ColumnIndex<1>);
 
-    exam.Price = statement.GetType(ColumnIndex<2>) != SQLiteType::Null
-      ? statement.GetDouble(ColumnIndex<2>)
-      : Nullable<Double>(std::nullopt);
+    exam.Price = statement.GetDouble(ColumnIndex<2>);
 
     exam.CreatedDate = statement.GetDateTime<DateTime>(ColumnIndex<3>);
 
@@ -109,7 +110,7 @@ namespace Cenedes::Stores
     return std::nullopt;
   }
 
-  Coroutines::Generator<Models::Exam> ExamStore::Exams()
+  Helpers::Coroutines::Generator<Models::Exam> ExamStore::Exams()
   {
     for (SQLiteRow row : SQLiteStatement(*Connection, L"Select * From Exam"))
     {

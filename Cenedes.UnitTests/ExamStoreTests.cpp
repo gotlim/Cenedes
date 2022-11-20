@@ -3,8 +3,8 @@
 #include <filesystem>
 #include <vector>
 
-#include <Cenedes.Helpers.Entity.h>
-#include <Cenedes.Helpers.String.h>
+#include <Cenedes.Helpers.Entities.h>
+#include <Cenedes.Helpers.Strings.h>
 #include <Cenedes.Stores.Exam.h>
 
 using namespace Cenedes::Stores::SQLite;
@@ -46,12 +46,12 @@ TEST(Repositories, ExamStore)
 
   EXPECT_TRUE(exam_store.ExistsExam(exam.ExamId));
 
-  Updates::Exam exam_update;
+  UpdateExam exam_update;
   exam_update.Name = L"Examen de la Cabeza";
   exam_update.Price = 45;
   EXPECT_TRUE(exam_store.UpdateExam(exam.ExamId, exam_update));
 
-  auto nullable_exam = exam_store.Exams(Cenedes::Helpers::Entity::DefaultId);
+  auto nullable_exam = exam_store.Exams(Cenedes::Helpers::Entities::DefaultId);
   EXPECT_FALSE(nullable_exam.has_value());
 
   nullable_exam = exam_store.Exams(exam.ExamId);
@@ -72,7 +72,7 @@ TEST(Repositories, ExamStore)
   for (int32_t index = 0; const auto & exam : generator_exams)
   {
     EXPECT_EQ(exam.ExamId, (examid_it->GetUInt64()));
-    EXPECT_NE(exam.Name, winrt::to_hstring(Cenedes::Helpers::String::Empty));
+    EXPECT_NE(exam.Name, winrt::to_hstring(Cenedes::Helpers::Strings::WEmpty));
     ++examid_it;
   }
 

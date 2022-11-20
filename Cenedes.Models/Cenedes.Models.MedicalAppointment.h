@@ -5,16 +5,15 @@
 
 namespace Cenedes::Models
 {
-  struct MedicalAppointment : Entity
+  struct MedicalAppointment : public Entity
   {
-    UInt64   MedicalAppointmentId;
-    UInt64   PatientId;
-    UInt64   MedicId;
-    DateTime AppointmentDate;
-    String   Description;
-    Boolean  Attended;
-
+    EntityIdType      MedicalAppointmentId;
+    EntityIdType      PatientId;
     Nullable<Patient> Patient;
+    EntityIdType      MedicId;
     Nullable<Medic>   Medic;
+    DateTime          AppointmentDate;
+    String            Description;
+    Boolean           Attended;
   };
 }

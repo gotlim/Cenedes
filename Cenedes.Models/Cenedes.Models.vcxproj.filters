@@ -14,6 +14,10 @@
   <ItemGroup>
     <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Cenedes.Models.Entity.cpp">
+      <Filter>Creates</Filter>
+    </ClCompile>
+    <ClCompile Include="Cenedes.Models.Sex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cenedes.Models.h" />
@@ -65,9 +69,6 @@
     <ClInclude Include="Cenedes.Models.Epicrisis.h">
       <Filter>Creates</Filter>
     </ClInclude>
-    <ClInclude Include="Cenedes.Models.EntityBase.h">
-      <Filter>Creates</Filter>
-    </ClInclude>
     <ClInclude Include="Cenedes.Models.Entity.h">
       <Filter>Creates</Filter>
     </ClInclude>
@@ -83,9 +84,11 @@
     <ClInclude Include="Cenedes.Models.Clinic.h">
       <Filter>Creates</Filter>
     </ClInclude>
-    <ClInclude Include="Cenedes.Models.Updates.Exam.h">
+    <ClInclude Include="Cenedes.Models.UpdateExam.h">
       <Filter>Updates</Filter>
     </ClInclude>
+    <ClInclude Include="Cenedes.Models.Types.h" />
+    <ClInclude Include="Cenedes.Models.Exports.Api.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

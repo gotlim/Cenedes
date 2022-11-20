@@ -215,9 +215,9 @@ namespace Cenedes::Stores::SQLite
     SQLiteBackup(
       SQLiteConnection const& destination,
       SQLiteConnection const& source,
-      char const* const destinationName = "main",
-      char const* const sourceName = "main")
-      : m_Handle(sqlite3_backup_init(destination.GetAbi(), destinationName, source.GetAbi(), sourceName))
+      char const* const destination_name = "main",
+      char const* const source_name = "main")
+      : m_Handle(sqlite3_backup_init(destination.GetAbi(), destination_name, source.GetAbi(), source_name))
       , m_Destination(&destination)
     {
       if (!m_Handle)

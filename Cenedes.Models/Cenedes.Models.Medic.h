@@ -4,8 +4,8 @@
 
 namespace Cenedes::Models
 {
-  struct Medic : Person
+  struct Medic : public Person
   {
-    UInt64 MedicId;
+    EntityIdType MedicId;
   };
 }

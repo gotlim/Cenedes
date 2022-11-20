@@ -4,14 +4,13 @@
 
 namespace Cenedes::Models
 {
-  struct Prescription : Entity
+  struct Prescription : public Entity
   {
-    UInt64   PrescriptionId{ 0 };
-    UInt64   ConsultId{ 0 };
-    UInt64   PatientId{ 0 };
-    DateTime PrescriptionDate;
-
+    EntityIdType      PrescriptionId;
+    EntityIdType      ConsultId;
     Nullable<Consult> Consult;
+    EntityIdType      PatientId;
     Nullable<Patient> Patient;
+    DateTime          PrescriptionDate;
   };
 }

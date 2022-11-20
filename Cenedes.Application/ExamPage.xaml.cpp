@@ -46,7 +46,5 @@ namespace winrt::Cenedes::Application::implementation
 
   void ExamPage::ButtonCancel_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
   {
-    this->ExamNameTextBox().Text(L"");
-    this->ExamPriceTextBox().Text(L"");
   }
 }

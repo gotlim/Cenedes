@@ -17,17 +17,6 @@ TEST(TestCaseName, TestName)
 
   try
   {
-    /*
-     
-     
-     .*
-     ->*
-     Tipo Class::*member
-     Return (Class::*)(Arguments)
-
-
-    */
-
     //auto native_model = operator->*(clinic, Model<Models::Clinic>());
     auto native_model = clinic->*Model<Models::Clinic>();
 

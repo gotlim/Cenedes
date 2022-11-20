@@ -180,6 +180,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -196,6 +198,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -212,6 +216,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -228,6 +234,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -244,6 +252,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -260,6 +270,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -276,6 +288,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -292,6 +306,8 @@
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
       <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName).Helpers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CENEDES_MODELS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -305,9 +321,9 @@
     <ClInclude Include="Cenedes.Models.Consult.h" />
     <ClInclude Include="Cenedes.Models.ConsultExam.h" />
     <ClInclude Include="Cenedes.Models.Entity.h" />
-    <ClInclude Include="Cenedes.Models.EntityBase.h" />
     <ClInclude Include="Cenedes.Models.Epicrisis.h" />
     <ClInclude Include="Cenedes.Models.Exam.h" />
+    <ClInclude Include="Cenedes.Models.Exports.Api.h" />
     <ClInclude Include="Cenedes.Models.h" />
     <ClInclude Include="Cenedes.Models.Medic.h" />
     <ClInclude Include="Cenedes.Models.MedicalAppointment.h" />
@@ -323,11 +339,14 @@
     <ClInclude Include="Cenedes.Models.Prescription.h" />
     <ClInclude Include="Cenedes.Models.PrescriptionDetails.h" />
     <ClInclude Include="Cenedes.Models.Sex.h" />
-    <ClInclude Include="Cenedes.Models.Updates.Exam.h" />
+    <ClInclude Include="Cenedes.Models.Types.h" />
+    <ClInclude Include="Cenedes.Models.UpdateExam.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cenedes.Models.Entity.cpp" />
+    <ClCompile Include="Cenedes.Models.Sex.cpp" />
     <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -4,9 +4,9 @@
 
 namespace Cenedes::Models
 {
-  struct Clinic : Entity
+  struct Clinic : public Entity
   {
-    UInt64           ClinicId;
+    EntityIdType     ClinicId;
     String           Name;
     Nullable<String> Phone;
     Nullable<String> Address;

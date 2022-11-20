@@ -7,21 +7,20 @@
 
 namespace Cenedes::Models
 {
-  struct Consult : Entity
+  struct Consult : public Entity
   {
-    UInt64           ConsultId;
-    UInt64           PacientId;
-    UInt64           MedicId;
-    Nullable<UInt64> ClinicalReportId;
-    Nullable<UInt64> MedicalAppointmentId;
-    Double           Price;
-    String           Symptom;
-    String           Diagnosis;
-    DateTime         VisitDate;
-
-    Nullable<Medic> Medic;
-    Nullable<Patient> Patient;
-    Nullable<ClinicalReport> ClinicalReport;
+    EntityIdType                 ConsultId;
+    EntityIdType                 PacientId;
+    Nullable<Patient>            Patient;
+    EntityIdType                 MedicId;
+    Nullable<Medic>              Medic;
+    Nullable<EntityIdType>       ClinicalReportId;
+    Nullable<ClinicalReport>     ClinicalReport;
+    Nullable<EntityIdType>       MedicalAppointmentId;
     Nullable<MedicalAppointment> MedicalAppointment;
+    Double                       Price;
+    String                       Symptom;
+    String                       Diagnosis;
+    DateTime                     VisitDate;
   };
 }

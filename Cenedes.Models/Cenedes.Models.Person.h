@@ -7,14 +7,14 @@ namespace Cenedes::Models
 {
   struct Person : public Entity
   {
-    UInt64   PersonId;
-    String   Carnet;
-    String   Name;
-    String   LastName;
-    UInt16   Age;
-    DateTime Birthday;
-    Sex      Sex;
-    String   Address;
+    EntityIdType     PersonId;
+    String           Carnet;
+    String           Name;
+    String           LastName;
+    UInt16           Age;
+    DateTime         Birthday;
+    Sex              Sex;
+    String           Address;
     Nullable<String> Phone;
   };
 }

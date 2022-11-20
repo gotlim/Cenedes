@@ -4,10 +4,10 @@
 
 namespace Cenedes::Models
 {
-  struct Exam : Entity
+  struct Exam : public Entity
   {
-    UInt64           ExamId;
-    String           Name;
-    Nullable<Double> Price;
+    EntityIdType ExamId;
+    String       Name;
+    Double       Price;
   };
 }

@@ -4,11 +4,12 @@
 
 namespace Cenedes::Models
 {
-  struct MedicalSchedule : Entity
+  struct MedicalSchedule : public Entity
   {
-    UInt64   MedicalScheduleId;
-    UInt64   MedicId;
-    DateTime BeginDate;
-    DateTime EndDate;
+    EntityIdType    MedicalScheduleId;
+    EntityIdType    MedicId;
+    Nullable<Medic> Medic;
+    DateTime        BeginDate;
+    DateTime        EndDate;
   };
 }

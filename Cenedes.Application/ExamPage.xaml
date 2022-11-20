@@ -5,22 +5,47 @@
     xmlns:local="using:Cenedes.Application"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-    
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Background="AliceBlue" Margin="0,0,10,20">
-            <TextBlock Text="Registro de Examenes:" Margin="0,30,0,60" Padding="5" TextAlignment="Center" FontSize="30" Foreground="Black" FontFamily="Ebrima"></TextBlock>
-            <TextBlock Text="Nombre" TextAlignment="Center" Foreground="Black" FontSize="18" />
-            <TextBox x:Name="ExamNameTextBox" PlaceholderText="Nombre" Margin="20,4,50,30" Padding="10" Width="500" Height="40" BorderBrush="Blue" HorizontalAlignment="Center"></TextBox>
-            <TextBlock Text="precio" Margin="20,0,0,0" Foreground="Black" FontSize="18" TextAlignment="Center" />
-            <TextBox x:Name="ExamPriceTextBox" PlaceholderText="Precio C$" Margin="20,4,50,0" Padding="10" Width="500" Height="40" BorderBrush="Blue" HorizontalAlignment="Center"></TextBox>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Registrar" Click="ButtonSave_Click" Margin="0,50,20,0" HorizontalAlignment="Center" BorderBrush="Blue" ></Button>
-                <Button Content="Cancelar" Click="ButtonCancel_Click" Margin="20,50,0,0" HorizontalAlignment="Center" BorderBrush="Blue" ></Button>
-            </StackPanel>
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBlock">
+                <Setter Property="Margin" Value="0,10,0,10" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="0,10,0,10" />
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid MaxWidth="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Registro de Examenes"
+                   TextAlignment="Center"
+                   Style="{ThemeResource HeaderTextBlockStyle}" />
+
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <TextBlock Text="Nombre" />
+            <TextBox PlaceholderText="Nombre"
+                     Style="{ThemeResource DefaultTextBoxStyle}" />
         </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="2">
+            <TextBlock Text="Precio" />
+            <TextBox PlaceholderText="Precio"
+                     Style="{ThemeResource DefaultTextBoxStyle}" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <Button Content="Registrar" Click="ButtonSave_Click" />
+            <Button Content="Cancelar" Click="ButtonCancel_Click" />
+        </StackPanel>
+
     </Grid>
 </Page>

@@ -8,24 +8,23 @@
 
 namespace Cenedes::Models
 {
-  struct Epicrisis : Entity
+  struct Epicrisis : public Entity
   {
-    UInt64           EpicrisisId;
-    String           EpicrisisCode;
-    Nullable<UInt64> ConsultId;
-    Nullable<UInt64> ConsultExamId;
-    Nullable<UInt64> PatientExamId;
-    Nullable<UInt64> PrescriptionId;
-    UInt64           PatientId;
-    UInt64           MedicId;
-    String           Diagnosis;
-    DateTime         EpicrisisDate;
-
+    EntityIdType           EpicrisisId;
+    String                 EpicrisisCode;
+    Nullable<EntityIdType> ConsultId;
     Nullable<Consult>      Consult;
+    Nullable<EntityIdType> ConsultExamId;
     Nullable<ConsultExam>  ConsultExam;
+    Nullable<EntityIdType> PatientExamId;
     Nullable<PatientExam>  PatientExam;
+    Nullable<EntityIdType> PrescriptionId;
     Nullable<Prescription> Prescription;
+    EntityIdType           PatientId;
     Nullable<Patient>      Patient;
+    EntityIdType           MedicId;
     Nullable<Medic>        Medic;
+    String                 Diagnosis;
+    DateTime               EpicrisisDate;
   };
 }

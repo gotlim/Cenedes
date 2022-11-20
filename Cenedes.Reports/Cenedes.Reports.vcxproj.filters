@@ -7,7 +7,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="Cenedes.Reports.cpp" />
     <ClCompile Include="pch.cpp" />
   </ItemGroup>

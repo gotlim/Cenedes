@@ -5,12 +5,11 @@
 
 namespace Cenedes::Models
 {
-  struct MedicMedicialSpeciality : Entity
+  struct MedicMedicialSpeciality : public Entity
   {
-    UInt64 MedicId;
-    UInt64 MedicalSpecialtyId;
-
-    Nullable<Medic> Medic;
+    EntityIdType                MedicId;
+    Nullable<Medic>             Medic;
+    EntityIdType                MedicalSpecialtyId;
     Nullable<MedicalSpeciality> MedicalSpeciality;
   };
 }

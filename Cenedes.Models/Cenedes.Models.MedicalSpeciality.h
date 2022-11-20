@@ -4,9 +4,9 @@
 
 namespace Cenedes::Models
 {
-  struct MedicalSpeciality : Entity
+  struct MedicalSpeciality : public Entity
   {
-    UInt64 MedicalSpecialityId;
-    String Name;
+    EntityIdType MedicalSpecialityId;
+    String       Name;
   };
 }

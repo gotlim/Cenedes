@@ -1,6 +1,54 @@
 ﻿#pragma once
 
+#include "Cenedes.Helpers.Concepts.h"
+#include "Cenedes.Helpers.Entities.h"
 #include "Cenedes.Helpers.Extensions.h"
-#include "Cenedes.Helpers.String.h"
-#include "Cenedes.Helpers.Entity.h"
+#include "Cenedes.Helpers.Generator.h"
 #include "Cenedes.Helpers.PatchValue.h"
+#include "Cenedes.Helpers.Strings.h"
+#include "Cenedes.Helpers.Types.h"
+
+#include <Windows.h>
+#include <safeint.h>
+
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+#include <cctype>
+#include <cwctype>
+#include <cwchar>
+#include <cuchar>
+
+#include <string>
+#include <string_view>
+#include <charconv>
+#include <iostream>
+#include <syncstream>
+#include <filesystem>
+#include <fstream>
+#include <sstream>
+#include <any>
+#include <optional>
+#include <variant>
+#include <tuple>
+#include <initializer_list>
+#include <typeindex>
+#include <typeinfo>
+#include <chrono>
+#include <random>
+#include <ranges>
+#include <algorithm>
+#include <numeric>
+#include <numbers>
+#include <format>
+#include <iterator>
+#include <coroutine>
+#include <thread>
+#include <stop_token>
+#include <future>
+#include <mutex>
+#include <shared_mutex>
+#include <semaphore>
+#include <condition_variable>
+#include <memory>
+#include <source_location>

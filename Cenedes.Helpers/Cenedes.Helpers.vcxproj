@@ -180,6 +180,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -196,6 +197,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -212,6 +214,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -228,6 +231,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -244,6 +248,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -260,6 +265,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -276,6 +282,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -292,6 +299,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ConformanceMode>true</ConformanceMode>
       <EnableModules>true</EnableModules>
+      <PreprocessorDefinitions>CENEDES_HELPERS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -300,20 +308,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Cenedes.Coroutine.Generator.h" />
+    <ClInclude Include="Cenedes.Helpers.ApplicationException.h" />
+    <ClInclude Include="Cenedes.Helpers.Constants.h" />
+    <ClInclude Include="Cenedes.Helpers.Exports.Api.h" />
+    <ClInclude Include="Cenedes.Helpers.Generator.h" />
     <ClInclude Include="Cenedes.Helpers.Concepts.h" />
-    <ClInclude Include="Cenedes.Helpers.Entity.h" />
+    <ClInclude Include="Cenedes.Helpers.Entities.h" />
     <ClInclude Include="Cenedes.Helpers.Extensions.h" />
     <ClInclude Include="Cenedes.Helpers.h" />
     <ClInclude Include="Cenedes.Helpers.PatchValue.h" />
-    <ClInclude Include="Cenedes.Helpers.String.h" />
+    <ClInclude Include="Cenedes.Helpers.Strings.h" />
     <ClInclude Include="Cenedes.Helpers.Types.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Cenedes.Helpers.Errors.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cenedes.Helpers.ApplicationException.cpp" />
+    <ClCompile Include="Cenedes.Helpers.Errors.cpp" />
     <ClCompile Include="DllMain.cpp" />
-    <ClCompile Include="Cenedes.Helpers.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

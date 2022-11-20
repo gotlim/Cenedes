@@ -5,13 +5,13 @@
 
 namespace Cenedes::Models
 {
-  struct PatientClinic : Entity
+  struct PatientClinic : public Entity
   {
-    UInt64             PatientClinicId;
-    UInt64             PatientId;
-    UInt64             ClinicId;
-    Nullable<DateTime> ApproximateDate;
+    EntityIdType       PatientClinicId;
+    EntityIdType       PatientId;
     Nullable<Patient>  Patient;
+    EntityIdType       ClinicId;
     Nullable<Clinic>   Clinic;
+    Nullable<DateTime> ApproximateDate;
   };
 }

@@ -4,7 +4,9 @@
 #include "Clinic.g.cpp"
 #endif
 
-#include "Cenedes.Helpers.String.h"
+#include "Cenedes.Helpers.Strings.h"
+
+using namespace Cenedes::Helpers::Strings;
 
 namespace winrt::Cenedes::ViewModels::implementation
 {
@@ -30,7 +32,7 @@ namespace winrt::Cenedes::ViewModels::implementation
 
   hstring Clinic::Phone() const noexcept
   {
-    return m_Clinic.Phone.value_or(::Cenedes::Helpers::String::Empty);
+    return m_Clinic.Phone.value_or(WEmpty);
   }
 
   void Clinic::Phone(const hstring& phone) noexcept
@@ -40,7 +42,7 @@ namespace winrt::Cenedes::ViewModels::implementation
 
   hstring Clinic::Address() const noexcept
   {
-    return m_Clinic.Address.value_or(::Cenedes::Helpers::String::Empty);
+    return m_Clinic.Address.value_or(WEmpty);
   }
 
   void Clinic::Address(const hstring& address) noexcept

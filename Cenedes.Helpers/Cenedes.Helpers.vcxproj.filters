@@ -8,20 +8,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DllMain.cpp" />
-    <ClCompile Include="Cenedes.Helpers.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Cenedes.Helpers.ApplicationException.cpp" />
+    <ClCompile Include="Cenedes.Helpers.Errors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cenedes.Helpers.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Cenedes.Helpers.String.h" />
-    <ClInclude Include="Cenedes.Helpers.Entity.h" />
+    <ClInclude Include="Cenedes.Helpers.Strings.h" />
+    <ClInclude Include="Cenedes.Helpers.Entities.h" />
     <ClInclude Include="Cenedes.Helpers.Extensions.h" />
     <ClInclude Include="Cenedes.Helpers.Types.h" />
     <ClInclude Include="Cenedes.Helpers.PatchValue.h" />
     <ClInclude Include="Cenedes.Helpers.Concepts.h" />
-    <ClInclude Include="Cenedes.Coroutine.Generator.h" />
+    <ClInclude Include="Cenedes.Helpers.Generator.h" />
+    <ClInclude Include="Cenedes.Helpers.Errors.h" />
+    <ClInclude Include="Cenedes.Helpers.ApplicationException.h" />
+    <ClInclude Include="Cenedes.Helpers.Constants.h" />
+    <ClInclude Include="Cenedes.Helpers.Exports.Api.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

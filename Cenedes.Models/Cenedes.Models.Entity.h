@@ -1,11 +1,15 @@
 #pragma once
 
-#include "Cenedes.Models.EntityBase.h"
+#include "Cenedes.Models.Exports.Api.h"
+#include "Cenedes.Models.Types.h"
 
 namespace Cenedes::Models
 {
-  struct Entity : EntityBase
+  struct CENEDES_MODELS_API Entity
   {
+    Entity() noexcept;
+    virtual ~Entity() noexcept = default;
+
     DateTime            CreatedDate;
     Nullable<DateTime>  ModifiedDate;
     Nullable<DateTime>  DeletedDate;

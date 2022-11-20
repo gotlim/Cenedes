@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Cenedes.Helpers.Concepts.h"
-
-#include <utility>
 #include <concepts>
+#include <utility>
 #include <functional>
 #include <tuple>
+
+#include "Cenedes.Helpers.Concepts.h"
 
 namespace Cenedes::Helpers::Extensions
 {
@@ -72,7 +72,7 @@ namespace Cenedes::Helpers::Extensions
       }
       else
       {
-        static_assert(Cenedes::Helpers::AlwaysFalse<NativeModel>);
+        static_assert(Cenedes::Helpers::Concepts::AlwaysFalse<NativeModel>);
       }
     };
   }

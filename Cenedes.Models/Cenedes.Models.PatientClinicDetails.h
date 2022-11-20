@@ -4,11 +4,12 @@
 
 namespace Cenedes::Models
 {
-  struct PatientClinicDetails : Entity
+  struct PatientClinicDetails : public Entity
   {
-    UInt64           PatientClinicDetailId;
-    UInt64           PatientClinicId;
-    Nullable<String> MedicName;
-    String           Description;
+    EntityIdType            PatientClinicDetailId;
+    EntityIdType            PatientClinicId;
+    Nullable<PatientClinic> PatientClinic;
+    Nullable<String>        MedicName;
+    String                  Description;
   };
 }
