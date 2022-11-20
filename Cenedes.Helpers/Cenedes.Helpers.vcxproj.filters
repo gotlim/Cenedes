@@ -27,6 +27,7 @@
     <ClInclude Include="Cenedes.Helpers.ApplicationException.h" />
     <ClInclude Include="Cenedes.Helpers.Constants.h" />
     <ClInclude Include="Cenedes.Helpers.Exports.Api.h" />
+    <ClInclude Include="Cenedes.Helpers.ViewModels.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

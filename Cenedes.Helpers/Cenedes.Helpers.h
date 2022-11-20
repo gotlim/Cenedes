@@ -7,6 +7,7 @@
 #include "Cenedes.Helpers.PatchValue.h"
 #include "Cenedes.Helpers.Strings.h"
 #include "Cenedes.Helpers.Types.h"
+#include "Cenedes.Helpers.ViewModels.h"
 
 #include <Windows.h>
 #include <safeint.h>

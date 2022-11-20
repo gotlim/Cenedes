@@ -319,6 +319,7 @@
     <ClInclude Include="Cenedes.Helpers.PatchValue.h" />
     <ClInclude Include="Cenedes.Helpers.Strings.h" />
     <ClInclude Include="Cenedes.Helpers.Types.h" />
+    <ClInclude Include="Cenedes.Helpers.ViewModels.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Cenedes.Helpers.Errors.h" />
     <ClInclude Include="targetver.h" />
